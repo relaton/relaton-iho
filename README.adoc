@@ -1,0 +1,131 @@
+= Relaton for IHO documents
+
+image:https://img.shields.io/gem/v/relaton-iho.svg["Gem Version", link="https://rubygems.org/gems/relaton-iho"]
+image:https://github.com/relaton/relaton-iho/workflows/macos/badge.svg["Build Status (macOS)", link="https://github.com/relaton/relaton-iho/actions?workflow=macos"]
+image:https://github.com/relaton/relaton-iho/workflows/windows/badge.svg["Build Status (Windows)", link="https://github.com/relaton/relaton-iho/actions?workflow=windows"]
+image:https://github.com/relaton/relaton-iho/workflows/ubuntu/badge.svg["Build Status (Ubuntu)", link="https://github.com/relaton/relaton-iho/actions?workflow=ubuntu"]
+image:https://codeclimate.com/github/relaton/relaton-iho/badges/gpa.svg["Code Climate", link="https://codeclimate.com/github/relaton/relaton-iho"]
+image:https://img.shields.io/github/issues-pr-raw/relaton/relaton-iho.svg["Pull Requests", link="https://github.com/relaton/relaton-iho/pulls"]
+image:https://img.shields.io/github/commits-since/relaton/relaton-iho/latest.svg["Commits since latest",link="https://github.com/relaton/relaton-iho/releases"]
+
+RelatonIho is a Ruby gem that implements the https://github.com/metanorma/metanorma-model-iso#iso-bibliographic-item[IsoBibliographicItem model].
+
+It currently retrieves metadata of IHO Standards from https://github.com/relaton/relaton-data-iho.
+
+== Installation
+
+Add this line to your application's Gemfile:
+
+[source,ruby]
+----
+gem 'relaton-iho'
+----
+
+And then execute:
+
+[source,sh]
+----
+$ bundle
+----
+
+Or install it yourself as:
+
+[source,sh]
+----
+$ gem install relaton_iho
+----
+
+== Usage
+
+=== Search for a standard using keywords
+
+[source,ruby]
+----
+hits = RelatonIho::IhoBibliography.search("OGC 19-025r1")
+=> [<RelatonIho::Hit:0x007fcab6b9aab8 @text="OGC 19-025r1" @fetched="false" @fullIdentifier="" @title="">]
+
+tem = hits[0].fetch
+=> #<RelatonIho::IhoBibliographicItem:0x007fcab3cb4758
+...
+----
+
+=== XML serialization
+[source,ruby]
+----
+item.to_xml
+=> "<bibitem id="19-025r1" type="standard">
+      <title type="title-main" format="text/plain" language="en" script="Latn">Development of Spatial Data Infrastructures for Marine Data Management</title>
+      <title type="main" format="text/plain" language="en" script="Latn">Development of Spatial Data Infrastructures for Marine Data Management</title>
+      <uri type="obp">https://portal.opengeospatial.org/files/?artifact_id=88037</uri>
+      <docidentifier type="OGC">19-025r1</docidentifier>
+      <date type="published">
+        <on>2019</on>
+      </date>
+      ...
+    </bibitem>"
+----
+With argument `bibdata: true` it ouputs XML wrapped by `bibdata` element and adds flavour `ext` element.
+[source,ruby]
+----
+item.to_xml bibdata: true
+=> "<bibdata type="standard">
+      <title type="title-main" format="text/plain" language="en" script="Latn">Development of Spatial Data Infrastructures for Marine Data Management</title>
+      <title type="main" format="text/plain" language="en" script="Latn">Development of Spatial Data Infrastructures for Marine Data Management</title>
+      <uri type="obp">https://portal.opengeospatial.org/files/?artifact_id=88037</uri>
+      <docidentifier type="OGC">19-025r1</docidentifier>
+      <date type="published\">
+        <on>2019</on>
+      </date>
+      ...
+      <ext>
+        <doctype>public-engineering-report</doctype>
+      </ext>
+    </bibdata>"
+----
+
+=== Get code, and year
+[source,ruby]
+----
+RelatonIho::IhoBibliography.get "OGC 19-025r1", "2019", {}
+fetching OGC 19-025r1...
+=> #<RelatonIho::IhoBibliographicItem:0x007fc322e9aba0
+...
+----
+
+=== Create bibliographic item from XML
+[source,ruby]
+----
+RelatonIho::XMLParser.from_xml File.read('spec/fixtures/ogc_bib_item.xml')
+=> #<RelatonIho::IhoBibliographicItem:0x007fc322ea82c8
+...
+----
+
+=== Create bibliographic item from YAML
+[source,ruby]
+----
+hash = YAML.load_file 'spec/fixtures/ogc_bib_item.yml'
+=> {"id"=>"19-025r1",
+...
+
+bib_hash = RelatonIho::HashConverter.hash_to_bib hash
+=> {:id=>"19-025r1",
+...
+
+RelatonIho::IhoBibliographicItem.new bib_hash
+=> #<RelatonIho::IhoBibliographicItem:0x007fc322ef8548
+...
+----
+
+== Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to https://rubygems.org[rubygems.org].
+
+== Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/relaton/relaton-iho.
+
+== License
+
+The gem is available as open source under the terms of the https://opensource.org/licenses/MIT[MIT License].
