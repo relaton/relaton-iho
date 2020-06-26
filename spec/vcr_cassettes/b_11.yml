@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/relaton/relaton-data-iho/master/data/b-11.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - raw.githubusercontent.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '645'
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - default-src 'none'; style-src 'unsafe-inline'; sandbox
+      Content-Type:
+      - text/plain; charset=utf-8
+      Etag:
+      - W/"fa63ad1e1fd281c51f91955ef663cde5e330e4e145155a2e4a0d8655aa81b15b"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      Via:
+      - 1.1 varnish
+      - 1.1 varnish (Varnish/6.0)
+      X-Github-Request-Id:
+      - D77E:2683:2F3C2B:379A65:5EF4BD52
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Thu, 25 Jun 2020 15:05:55 GMT
+      X-Served-By:
+      - cache-hhn4083-HHN
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1593097555.652777,VS0,VE436
+      Vary:
+      - Authorization,Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fastly-Request-Id:
+      - 6675c270b79560f19944231d6eb5e6ba94b136a5
+      Expires:
+      - Thu, 25 Jun 2020 15:10:55 GMT
+      Source-Age:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        LS0tCnRpdGxlOgogIC0gdHlwZTogbWFpbgogICAgY29udGVudDogSUhPLUlPQyBHRUJDTyBDb29rIEJvb2sKICAgIGxhbmd1YWdlOiBlbgogIC0gdHlwZTogbWFpbgogICAgY29udGVudDogTGl2cmUgZGUgcmVjZXR0ZXMgR0VCQ08gT0hJLUNPSQogICAgbGFuZ3VhZ2U6IGZyCgplZGl0b3JpYWxncm91cDoKICAtIGNvbW1pdHRlZTogaHNzYwogICAgd29ya2dyb3VwOiBHRUJDTwoKdHlwZTogc3RhbmRhcmQKCmRvY2lkOgogIHR5cGU6IElITwogIGlkOiBCLTExCmRvY251bWJlcjogMTEKZWRpdGlvbjogMS4wLjAKCmRvY3N0YXR1czoKICBzdGFnZToKICAgIHZhbHVlOiBpbi1mb3JjZQoKbGFuZ3VhZ2U6CiAgLSBlbgogIC0gZnIKCnNjcmlwdDogTGF0bgoKdmVyc2lvbjoKICByZXZpc2lvbl9kYXRlOiAyMDE5LTEwLTMxCiAgIyBkcmFmdDogd2hhdCdzIHRoZSB2ZXJzaW9uIG51bWJlcj8KCmRhdGU6CiAgdHlwZTogcHVibGlzaGVkCiAgZnJvbTogMjAyMC0wMS0yMAoKY29weXJpZ2h0OgogIC0gb3duZXI6CiAgICAgIG5hbWU6IEludGVybmF0aW9uYWwgSHlkcm9ncmFwaGljIE9yZ2FuaXphdGlvbgogICAgICBhYmJyZXZpYXRpb246IElITwogICAgICB1cmw6IHd3dy5paG8uaW50CiAgICBmcm9tOiAyMDE5CiAgLSBvd25lcjoKICAgICAgbmFtZTogSW50ZXJnb3Zlcm5tZW50YWwgT2NlYW5vZ3JhcGhpYyBDb21taXNzaW9uCiAgICAgIGFiYnJldmlhdGlvbjogSU9DCiAgICAgIHVybDogaHR0cDovL2lvYy11bmVzY28ub3JnCiAgICBmcm9tOiAyMDE5CgpsaW5rOgogIC0gdHlwZTogcGRmCiAgICBjb250ZW50OiBodHRwczovL3d3dy5zdGFyLm5lc2Rpcy5ub2FhLmdvdi9zb2NkL2xzYS9HRUJDT19Db29rYm9vay9kb2N1bWVudHMvQ29va0Jvb2tfMjAxOTEwMzEucGRmCgpwbGFjZTogTW9uYWNvCgp2YWxpZGl0eToKICBiZWdpbnM6IDIwMTktMTAtMzEKCmNvbnRyaWJ1dG9yOgogIC0gb3JnYW5pemF0aW9uOgogICAgICBuYW1lOiBJbnRlcm5hdGlvbmFsIEh5ZHJvZ3JhcGhpYyBPcmdhbml6YXRpb24KICAgICAgYWJicmV2aWF0aW9uOiBJSE8KICAgICAgdXJsOiB3d3cuaWhvLmludAogICAgcm9sZTogcHVibGlzaGVyCiAgLSBvcmdhbml6YXRpb246CiAgICAgIG5hbWU6IEludGVyZ292ZXJubWVudGFsIE9jZWFub2dyYXBoaWMgQ29tbWlzc2lvbgogICAgICBhYmJyZXZpYXRpb246IElPQwogICAgICB1cmw6IGh0dHA6Ly9pb2MtdW5lc2NvLm9yZwogICAgcm9sZTogcHVibGlzaGVyCgpzZXJpZXM6CiAgbnVtYmVyOiBCCiAgdHlwZTogbWFpbgogIHRpdGxlOgogICAgdHlwZTogb3JpZ2luYWwKICAgIGNvbnRlbnQ6CiAgICAgIC0gY29udGVudDogQmF0aHltZXRyaWMgUHVibGljYXRpb25zCiAgICAgICAgbGFuZ3VhZ2U6IGVuCiAgICAgICAgc2NyaXB0OiBMYXRuCiAgICAgIC0gY29udGVudDogUHVibGljYXRpb25zIGJhdGh5bcOpdHJpcXVlcwogICAgICAgIGxhbmd1YWdlOiBmcgogICAgICAgIHNjcmlwdDogTGF0bgogIHBsYWNlOiBNb25hY28KICBvcmdhbml6YXRpb246IEludGVybmF0aW9uYWwgSHlkcm9ncmFwaGljIE9yZ2FuaXphdGlvbgoKZmV0Y2hlZDogMjAyMC0wMy0yOQo=
+    http_version: null
+  recorded_at: Thu, 25 Jun 2020 15:05:55 GMT
+recorded_with: VCR 5.1.0

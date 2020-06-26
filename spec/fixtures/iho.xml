@@ -1,0 +1,80 @@
+<bibdata type="standard">
+  <fetched>2020-03-29</fetched>
+  <uri type="pdf">https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf</uri>
+  <docidentifier type="IHO">B-11</docidentifier>
+  <docnumber>11</docnumber>
+  <date type="published">
+    <from>2020</from>
+  </date>
+  <contributor>
+    <organization>
+      <name>International Hydrographic Organization</name>
+      <abbreviation>IHO</abbreviation>
+      <uri>www.iho.int</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <organization>
+      <name>Intergovernmental Oceanographic Commission</name>
+      <abbreviation>IOC</abbreviation>
+      <uri>http://ioc-unesco.org</uri>
+    </organization>
+  </contributor>
+  <edition>1.0.0</edition>
+  <version>
+    <revision-date>2019-10-31</revision-date>
+  </version>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <status>
+    <stage>in-force</stage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Hydrographic Organization</name>
+        <abbreviation>IHO</abbreviation>
+        <uri>www.iho.int</uri>
+      </organization>
+    </owner>
+  </copyright>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>Intergovernmental Oceanographic Commission</name>
+        <abbreviation>IOC</abbreviation>
+        <uri>http://ioc-unesco.org</uri>
+      </organization>
+    </owner>
+  </copyright>
+  <series type="main">
+    <title type="original" format="text/plain">
+      <variant language="en" script="Latn">Bathymetric Publications</variant>
+      <variant language="fr" script="Latn">Publications bathymétriques</variant>
+    </title>
+    <place>Monaco</place>
+    <organization>International Hydrographic Organization</organization>
+    <number>B</number>
+  </series>
+  <place>Monaco</place>
+  <validity>
+    <validityBegins>2019-10-31 00:00</validityBegins>
+  </validity>
+  <ext>
+    <editorialgroup>
+      <committee>hssc</committee>
+      <workgroup>WG1</workgroup>
+    </editorialgroup>
+    <editorialgroup>
+      <committee>irss</committee>
+      <workgroup>WG2</workgroup>
+    </editorialgroup>
+    <commentperiod>
+      <from>2011-01-01</from>
+      <to>2011-12-31</to>
+    </commentperiod>
+  </ext>
+</bibdata>

@@ -1,0 +1,71 @@
+---
+id: B-11
+link:
+  content: https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf
+  type: pdf
+type: standard
+docid:
+  id: B-11
+  type: IHO
+docnumber: 11
+date:
+  type: published
+  from: '2020-01-20'
+contributor:
+- organization:
+    name: International Hydrographic Organization
+    abbreviation: IHO
+    url: www.iho.int
+- organization:
+    name: Intergovernmental Oceanographic Commission
+    abbreviation: IOC
+    url: http://ioc-unesco.org
+edition: 1.0.0
+version:
+  revision_date: 2019-10-31
+revdate: 2019-10-31
+language:
+- en
+- fr
+script: Latn
+docstatus:
+  stage:
+    value: in-force
+copyright:
+- owner:
+    name: International Hydrographic Organization
+    abbreviation: IHO
+    url: www.iho.int
+  from: '2019'
+- owner:
+    name: Intergovernmental Oceanographic Commission
+    abbreviation: IOC
+    url: http://ioc-unesco.org
+  from: '2019'
+series:
+  type: main
+  title:
+    type: original
+    content:
+    - content: Bathymetric Publications
+      language: en
+      script: Latn
+    - content: Publications bathymétriques
+      language: fr
+      script: Latn
+    format: text/plain
+  place: Monaco
+  organization: International Hydrographic Organization
+  number: B
+place: Monaco
+validity:
+  begins: 2019-10-31 00:00
+fetched: '2020-03-29'
+editorialgroup:
+  - committee: hssc
+    workgroup: WG1
+  - committee: irss
+    workgroup: WG2
+commentperiod:
+  from: '2011-01-01'
+  to: '2011-12-31'
