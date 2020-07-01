@@ -36,7 +36,7 @@ module RelatonIho
     # @parma committee [String]
     # @param workgroup [String]
     def initialize(committee:, workgroup:)
-      unless %[hssc ircc].include? committee
+      unless %[hssc ircc].include? committee.downcase
         warn "[relaton-iho] WARNING: invalid committee: #{committee}"
       end
       @committee = committee
