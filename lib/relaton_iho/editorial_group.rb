@@ -31,11 +31,14 @@ module RelatonIho
 
   class EditorialGroup
     # @return [String]
-    attr_reader :committee, :workgroup
+    attr_reader :committee
+
+    # @return [String, nil]
+    attr_reader :workgroup
 
     # @parma committee [String]
-    # @param workgroup [String]
-    def initialize(committee:, workgroup:)
+    # @param workgroup [String, nil]
+    def initialize(committee:, workgroup: nil)
       unless %[hssc ircc].include? committee.downcase
         warn "[relaton-iho] WARNING: invalid committee: #{committee}"
       end
@@ -47,13 +50,15 @@ module RelatonIho
     def to_xml(builder)
       builder.editorialgroup do
         builder.committee committee
-        builder.workgroup workgroup
+        builder.workgroup workgroup if workgroup
       end
     end
 
     # @return [Hash]
     def to_hash
-      { "committee" => committee, "workgroup" => workgroup }
+      hash = { "committee" => committee }
+      hash["workgroup"] = workgroup if workgroup
+      hash
     end
   end
 end
