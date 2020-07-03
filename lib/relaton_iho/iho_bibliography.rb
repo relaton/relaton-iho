@@ -11,7 +11,7 @@ module RelatonIho
         ref = text.sub(/^IHO\s/, "").downcase
         uri = URI("#{ENDPOINT}#{ref}.yaml")
         resp = Net::HTTP.get_response uri
-        returm unless resp.code == "200"
+        return unless resp.code == "200"
 
         hash = HashConverter.hash_to_bib YAML.safe_load(resp.body, [Date])
         item = IhoBibliographicItem.new hash
