@@ -15,7 +15,7 @@ module RelatonIho
 
     # @param builder [Nokogiri::XML::Builder]
     # @param bibdata [TrueClasss, FalseClass, NilClass]
-    def to_xml(builer = nil, **opts)
+    def to_xml(builer = nil, **opts) # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength
       opts[:ext] = !commentperiod.nil?
       super do |b|
         if opts[:bibdata] && (doctype || editorialgroup&.presence? ||
@@ -35,6 +35,14 @@ module RelatonIho
       hash = super
       hash["commentperiod"] = commentperiod.to_hash if commentperiod
       hash
+    end
+
+    # @param prefix [String]
+    # @return [String]
+    def to_asciibib(prefix = "")
+      out = super
+      out += commentperiod.to_asciibib prefix if commentperiod
+      out
     end
   end
 end

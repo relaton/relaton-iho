@@ -5,7 +5,7 @@ module RelatonIho
 
     def_delegators :@collection, :first, :any?
 
-    # @return [Array<RelatonIho::editorialgroup]
+    # @return [Array<RelatonIho::EditorialGroup]
     attr_reader :collection
 
     # @param collection [Array<RelatonIho::EditorialGroup>]
@@ -21,6 +21,12 @@ module RelatonIho
     # @return [Hash]
     def to_hash
       single_element_array collection
+    end
+
+    # @param prefix [String]
+    # @return [String]
+    def to_asciibib(prefix)
+      collection.map { |ed| ed.to_asciibib prefix, collection.size }.join
     end
 
     # @return [Boolean]
@@ -59,6 +65,18 @@ module RelatonIho
       hash = { "committee" => committee }
       hash["workgroup"] = workgroup if workgroup
       hash
+    end
+
+    # @param prefix [String]
+    # @param count [Integer]
+    # @return [Strin]
+    def to_asciibib(prefix, count)
+      pref = prefix.empty? ? prefix : prefix + "."
+      pref += "editorialgroup"
+      out = count > 1 ? "#{pref}::\n" : ""
+      out += "#{pref}.committee:: #{committee}\n"
+      out += "#{pref}.workgroup:: #{workgroup}\n" if workgroup
+      out
     end
   end
 end

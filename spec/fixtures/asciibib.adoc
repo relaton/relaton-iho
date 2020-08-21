@@ -1,0 +1,62 @@
+[%bibitem]
+== {blank}
+id:: B-11
+fetched:: 2020-03-29
+type:: standard
+docid.type:: IHO
+docid.id:: B-11
+docnumber:: 11
+edition:: 1.0.0
+language:: en
+language:: fr
+script:: Latn
+version.revision_date:: 2019-10-31
+docstatus.stage:: in-force
+date.type:: published
+date.from:: 2020-01-20
+copyright::
+copyright.owner.name.conten:: International Hydrographic Organization
+copyright.owner.abbreviation.conten:: IHO
+copyright.owner.url:: www.iho.int
+copyright.role.type:: publisher
+copyright.from:: 2019
+copyright::
+copyright.owner.name.conten:: Intergovernmental Oceanographic Commission
+copyright.owner.abbreviation.conten:: IOC
+copyright.owner.url:: http://ioc-unesco.org
+copyright.role.type:: publisher
+copyright.from:: 2019
+link.type:: pdf
+link.content:: https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf
+place.name:: Monaco
+validity.begins:: 2019-10-31 00:00
+contributor::
+contributor.organization.name.conten:: International Hydrographic Organization
+contributor.organization.abbreviation.conten:: IHO
+contributor.organization.url:: www.iho.int
+contributor::
+contributor.organization.name.conten:: Intergovernmental Oceanographic Commission
+contributor.organization.abbreviation.conten:: IOC
+contributor.organization.url:: http://ioc-unesco.org
+series.type:: main
+series.title.type:: original
+series.title.variant::
+series.title.variant.conten:: Bathymetric Publications
+series.title.variant.language:: en
+series.title.variant.script:: Latn
+series.title.variant::
+series.title.variant.conten:: Publications bathymétriques
+series.title.variant.language:: fr
+series.title.variant.script:: Latn
+series.title.format:: text/plain
+series.place:: Monaco
+series.organization:: International Hydrographic Organization
+series.number:: B
+editorialgroup::
+editorialgroup.committee:: hssc
+editorialgroup.workgroup:: WG1
+editorialgroup::
+editorialgroup.committee:: irss
+editorialgroup.workgroup:: WG2
+commentperiod.from:: 2011-01-01
+commentperiod.to:: 2011-12-31
