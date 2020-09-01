@@ -1,3 +1,5 @@
+require "net/http"
+
 module RelatonIho
   class IhoBibliography
     ENDPOINT = "https://raw.githubusercontent.com/relaton/relaton-data-iho/"\
@@ -6,7 +8,7 @@ module RelatonIho
     class << self
       # @param text [String]
       # @return [RelatonIho::IhoBibliographicItem]
-      def search(text, _year = nil, _opts = {})
+      def search(text, _year = nil, _opts = {}) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
         warn "[relaton-iho] (\"#{text}\") fetching..."
         ref = text.sub(/^IHO\s/, "").downcase
         uri = URI("#{ENDPOINT}#{ref}.yaml")

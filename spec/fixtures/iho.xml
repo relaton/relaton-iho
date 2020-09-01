@@ -1,5 +1,7 @@
 <bibdata type="standard">
   <fetched>2020-03-29</fetched>
+  <title type="main" format="text/plain" language="en">IHO-IOC GEBCO Cook Book</title>
+  <title type="main" format="text/plain" language="fr">Livre de recettes GEBCO OHI-COI</title>
   <uri type="pdf">https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf</uri>
   <docidentifier type="IHO">B-11</docidentifier>
   <docnumber>11</docnumber>
@@ -7,6 +9,7 @@
     <from>2020</from>
   </date>
   <contributor>
+    <role type="publisher"/>
     <organization>
       <name>International Hydrographic Organization</name>
       <abbreviation>IHO</abbreviation>
@@ -14,6 +17,7 @@
     </organization>
   </contributor>
   <contributor>
+    <role type="publisher"/>
     <organization>
       <name>Intergovernmental Oceanographic Commission</name>
       <abbreviation>IOC</abbreviation>
@@ -65,12 +69,18 @@
   </validity>
   <ext>
     <editorialgroup>
-      <committee>hssc</committee>
-      <workgroup>WG1</workgroup>
-    </editorialgroup>
-    <editorialgroup>
-      <committee>irss</committee>
-      <workgroup>WG2</workgroup>
+      <committee>
+        <name>Hydrographic Services and Standards Committee</name>
+        <abbreviation>HSSC</abbreviation>
+      </committee>
+      <committee>
+        <name>Inter-Regional Coordination Committee</name>
+        <abbreviation>IRCC</abbreviation>
+        <committee>
+          <name>JOINT IHO-IOC GUIDING COMMITTEE FOR THE GENERAL BATHYMETRIC CHART OF THE OCEANS</name>
+          <abbreviation>GEBCO</abbreviation>
+        </committee>
+      </committee>
     </editorialgroup>
     <commentperiod>
       <from>2011-01-01</from>

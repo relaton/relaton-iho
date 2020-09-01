@@ -27,10 +27,23 @@ module RelatonIho
         return unless ext
 
         egs = ext.xpath("editorialgroup").map do |eg|
-          EditorialGroup.new(committee: eg.at("committee")&.text,
-                             workgroup: eg.at("workgroup")&.text)
+          grps = eg.xpath("committee|workgroup|commission").map do |ig|
+            iho_group ig
+          end
+          EditorialGroup.new grps
         end
         EditorialGroupCollection.new egs if egs.any?
+      end
+
+      # @param ext [Nokogiri::XML::Element. nil]
+      # @return [RelatonIho::Committee, RelatonIho::Commission,
+      #   RelatonIho::Workgroup, nil]
+      def iho_group(ihgrp)
+        return unless ihgrp
+
+        klass = Object.const_get "RelatonIho::" + ihgrp.name.capitalize
+        subg = iho_group ihgrp.at("./committee|./workgroup|./commission")
+        klass.new ihgrp.at("abbreviation").text, ihgrp.at("name")&.text, subg
       end
 
       # @param ext [Nokogiri::XML::Element]

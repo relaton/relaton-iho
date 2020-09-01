@@ -1,7 +1,6 @@
 module RelatonIho
   class EditorialGroupCollection
     extend Forwardable
-    include RelatonBib
 
     def_delegators :@collection, :first, :any?
 
@@ -18,9 +17,9 @@ module RelatonIho
       collection.each { |eg| eg.to_xml builder }
     end
 
-    # @return [Hash]
+    # @return [Hash, Array<Hash>]
     def to_hash
-      single_element_array collection
+      collection.map &:to_hash
     end
 
     # @param prefix [String]
@@ -36,35 +35,28 @@ module RelatonIho
   end
 
   class EditorialGroup
-    # @return [String]
-    attr_reader :committee
+    include RelatonBib
 
-    # @return [String, nil]
-    attr_reader :workgroup
+    # @return [Array<RelatonIho::Committee, RelatonIho::Commission,
+    #          RelatonIho::Workgroup>]
+    attr_accessor :workgroup
 
-    # @parma committee [String]
-    # @param workgroup [String, nil]
-    def initialize(committee:, workgroup: nil)
-      unless %[hssc ircc council ihr bureau imo msc dcdb].include? committee.downcase
-        warn "[relaton-iho] WARNING: invalid committee: #{committee}"
-      end
-      @committee = committee
+    # @param workgroup [Array<RelatonIho::Committee, RelatonIho::Commission,
+    #                   RelatonIho::Workgroup>]
+    def initialize(workgroup)
       @workgroup = workgroup
     end
 
     # @param builder [Nokogiro::XML::Builder]
     def to_xml(builder)
       builder.editorialgroup do
-        builder.committee committee
-        builder.workgroup workgroup if workgroup
+        workgroup.each { |wg| wg.to_xml builder }
       end
     end
 
-    # @return [Hash]
+    # @return [Hash, Array<Hash>]
     def to_hash
-      hash = { "committee" => committee }
-      hash["workgroup"] = workgroup if workgroup
-      hash
+      single_element_array workgroup
     end
 
     # @param prefix [String]
@@ -74,8 +66,7 @@ module RelatonIho
       pref = prefix.empty? ? prefix : prefix + "."
       pref += "editorialgroup"
       out = count > 1 ? "#{pref}::\n" : ""
-      out += "#{pref}.committee:: #{committee}\n"
-      out += "#{pref}.workgroup:: #{workgroup}\n" if workgroup
+      workgroup.each { |wg| out += wg.to_asciibib pref, workgroup.size }
       out
     end
   end

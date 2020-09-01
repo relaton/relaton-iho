@@ -26,6 +26,13 @@ RSpec.describe RelatonIho do
         expect(xml).to be_equivalent_to File.read(file, encoding: "UTF-8")
       end
     end
+
+    # it "by slightly misspelled reference" do
+    #   VCR.use_cassette "iho_s63" do
+    #     result = RelatonIho::IhoBibliography.get "IHO S63"
+    #     expect(result).to be_instance_of RelatonIho::IhoBibliographicItem
+    #   end
+    # end
   end
 
   context "bib instance" do

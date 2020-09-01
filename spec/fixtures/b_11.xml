@@ -69,8 +69,18 @@
   </validity>
   <ext>
     <editorialgroup>
-      <committee>hssc</committee>
-      <workgroup>GEBCO</workgroup>
+      <committee>
+        <name>Hydrographic Services and Standards Committee</name>
+        <abbreviation>HSSC</abbreviation>
+      </committee>
+      <committee>
+        <name>Inter-Regional Coordination Committee</name>
+        <abbreviation>IRCC</abbreviation>
+        <committee>
+          <name>JOINT IHO-IOC GUIDING COMMITTEE FOR THE GENERAL BATHYMETRIC CHART OF THE OCEANS</name>
+          <abbreviation>GEBCO</abbreviation>
+        </committee>
+      </committee>
     </editorialgroup>
   </ext>
 </bibdata>

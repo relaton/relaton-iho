@@ -2,6 +2,16 @@
 == {blank}
 id:: B-11
 fetched:: 2020-03-29
+title::
+title.type:: main
+title.content:: IHO-IOC GEBCO Cook Book
+title.language:: en
+title.format:: text/plain
+title::
+title.type:: main
+title.content:: Livre de recettes GEBCO OHI-COI
+title.language:: fr
+title.format:: text/plain
 type:: standard
 docid.type:: IHO
 docid.id:: B-11
@@ -15,14 +25,14 @@ docstatus.stage:: in-force
 date.type:: published
 date.from:: 2020-01-20
 copyright::
-copyright.owner.name.conten:: International Hydrographic Organization
-copyright.owner.abbreviation.conten:: IHO
+copyright.owner.name.content:: International Hydrographic Organization
+copyright.owner.abbreviation.content:: IHO
 copyright.owner.url:: www.iho.int
 copyright.role.type:: publisher
 copyright.from:: 2019
 copyright::
-copyright.owner.name.conten:: Intergovernmental Oceanographic Commission
-copyright.owner.abbreviation.conten:: IOC
+copyright.owner.name.content:: Intergovernmental Oceanographic Commission
+copyright.owner.abbreviation.content:: IOC
 copyright.owner.url:: http://ioc-unesco.org
 copyright.role.type:: publisher
 copyright.from:: 2019
@@ -31,32 +41,36 @@ link.content:: https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/document
 place.name:: Monaco
 validity.begins:: 2019-10-31 00:00
 contributor::
-contributor.organization.name.conten:: International Hydrographic Organization
-contributor.organization.abbreviation.conten:: IHO
+contributor.organization.name.content:: International Hydrographic Organization
+contributor.organization.abbreviation.content:: IHO
 contributor.organization.url:: www.iho.int
+contributor.role.type:: publisher
 contributor::
-contributor.organization.name.conten:: Intergovernmental Oceanographic Commission
-contributor.organization.abbreviation.conten:: IOC
+contributor.organization.name.content:: Intergovernmental Oceanographic Commission
+contributor.organization.abbreviation.content:: IOC
 contributor.organization.url:: http://ioc-unesco.org
+contributor.role.type:: publisher
 series.type:: main
 series.title.type:: original
 series.title.variant::
-series.title.variant.conten:: Bathymetric Publications
+series.title.variant.content:: Bathymetric Publications
 series.title.variant.language:: en
 series.title.variant.script:: Latn
 series.title.variant::
-series.title.variant.conten:: Publications bathymétriques
+series.title.variant.content:: Publications bathymétriques
 series.title.variant.language:: fr
 series.title.variant.script:: Latn
 series.title.format:: text/plain
 series.place:: Monaco
 series.organization:: International Hydrographic Organization
 series.number:: B
-editorialgroup::
-editorialgroup.committee:: hssc
-editorialgroup.workgroup:: WG1
-editorialgroup::
-editorialgroup.committee:: irss
-editorialgroup.workgroup:: WG2
+editorialgroup.committee::
+editorialgroup.committee.abbreviation:: HSSC
+editorialgroup.committee.name:: Hydrographic Services and Standards Committee
+editorialgroup.committee::
+editorialgroup.committee.abbreviation:: IRCC
+editorialgroup.committee.name:: Inter-Regional Coordination Committee
+editorialgroup.committee.committee.abbreviation:: GEBCO
+editorialgroup.committee.committee.name:: JOINT IHO-IOC GUIDING COMMITTEE FOR THE GENERAL BATHYMETRIC CHART OF THE OCEANS
 commentperiod.from:: 2011-01-01
 commentperiod.to:: 2011-12-31

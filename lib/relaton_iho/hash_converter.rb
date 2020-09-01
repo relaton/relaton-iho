@@ -25,8 +25,24 @@ module RelatonIho
         eg = ret[:editorialgroup]
         return unless eg.is_a?(Hash) || eg&.any?
 
-        collection = array(eg).map { |g| EditorialGroup.new g }
+        collection = array(eg).map do |g|
+          EditorialGroup.new(array(g).map { |wg| iho_workgroup wg })
+        end
         ret[:editorialgroup] = EditorialGroupCollection.new collection
+      end
+
+      # @param ihowg [Hash]
+      # @return [RelatonIho::Committee, RelatonIho::Workgroup,
+      #          RelatonIho::Commission]
+      def iho_workgroup(ihowg)
+        key, value = ihowg&.first
+        return unless key && value.is_a?(Hash)
+
+        klass = Object.const_get "RelatonIho::#{key.capitalize}"
+        subwg = value.select do |k, _|
+          %i[committee workgroup commission].include? k
+        end
+        klass.new value[:abbreviation], value[:name], iho_workgroup(subwg)
       end
     end
   end

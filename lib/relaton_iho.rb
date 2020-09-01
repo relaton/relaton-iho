@@ -5,6 +5,7 @@ require "relaton_iho/iho_bibliography"
 require "relaton_iho/hash_converter"
 require "relaton_iho/xml_parser"
 require "relaton_iho/editorial_group"
+require "relaton_iho/iho_group"
 require "relaton_iho/comment_periond"
 require "relaton_iho/iho_bibliographic_item"
 

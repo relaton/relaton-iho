@@ -1,0 +1,191 @@
+HSSC:
+  previously: CHRIS
+  name: Hydrographic Services and Standards Committee
+  class: Committee
+  subgroup:
+    S-100WG: 
+      name: S-100 Working Group
+      class: Workgroup
+    ENCWG:
+      name: ENC STANDARDS MAINTENANCE WORKING GROUP
+      class: Workgroup
+    NCWG:
+      previously: CSPCWG
+      name: NAUTICAL CARTOGRAPHY WORKING GROUP
+      class: Workgroup
+    NIPWG:
+      name: NAUTICAL INFORMATION PROVISION WORKING GROUP
+      class: Workgroup
+    DQWG:
+      name: DATA QUALITY WORKING GROUP
+      class: Workgroup
+    TWCWG:
+      name: Tides, Water Level and Currents Working Group
+      class: Workgroup
+    HDWG:
+      name: Hydrographic Dictionary Working Group
+      class: Workgroup
+    ABLOS:
+      name: Advisory Board on Law of the Sea
+      class: Workgroup
+    HSPT:
+      name: Project Team on Standards for Hydrographic Surveys
+      class: Workgroup
+    CPRNW:
+      name: Commission for the Promulgation of Radio Navigation Warnings
+      class: Commission
+    TSMAD:
+      name: Transfer Standard Maintenance and Application Development Working Group
+      class: Workgroup
+IRCC:
+  name: Inter-Regional Coordination Committee
+  class: Committee
+  subgroup:
+    RHCs:
+      name: Regional Hydrographic Commissions
+      class: Commission
+      subgroup:
+        NHC:
+          name: Nordic HC
+          class: Commission
+        NSHC:
+          name: North Sea HC
+          class: Commission
+        MBSHC:
+          name: Mediterranean and Black Seas HC
+          class: Commission
+          subgroup:
+            BASWG:
+              name: Black and Azov Seas Working Group
+              class: Workgroup
+        ARHC:
+          name: Arctic RHC
+          class: Commission
+        BHSC:
+          name: Baltic Sea HC
+          class: Commission
+        USCHC:
+          name: US / Canada HC
+          class: Commission
+        EAHS:
+          name: East Asia HC
+          class: Commission
+        EAtHC:
+          name: Eastern Atlantic HC
+          class: Commission
+        SEPRHC:
+          name: South-East Pacific RHC
+          class: Commission
+        SWPHC:
+          name: South-West Pacific HC
+          class: Commission
+          subgroup:
+            ICCWG:
+              name: International Charting Coordination Working Group
+              class: Workgroup
+        MACHC:
+          name: Meso American & Caribbean Sea HC
+          class: Commission
+        SAIHC:
+          name: Southern African and Islands HC
+          class: Commission
+        NIOHC:
+          name: North Indian Ocean HC
+          class: Commission
+        RSAHC:
+          name: ROPME Sea Area HC
+          class: Commission
+          subgroup:
+            ICCWG:
+              name: International Charting Coordination Working Group
+              class: Workgroup
+        SWAtHC:
+          name: South West Atlantic HC
+          class: Commission
+    HCA:
+      name: Hydrographic Commission on Antarctica
+      class: Commission
+      subgroup:
+        HPWG:
+          name: HCA Hydrography Priorities Working Group
+          class: Workgroup
+    WWNWS:
+      name: World-Wide Navigational Warning Service
+      class: Committee
+      subgroup:
+        S-124PT:
+          name: S-124 Project Team
+          class: Workgroup
+    CBSC:
+      name: CAPACITY BUILDING SUB-COMMITTEE
+      class: Committee
+    WENDWG:
+      name: WORLDWIDE ENC DATABASE WORKING GROUP
+      class: Workgroup
+    MSDIWG:
+      name: MARINE SPATIAL DATA INFRASTRUCTURES WORKING GROUP
+      class: Workgroup
+    EC-IHO:
+      name: IENWG & EC - IHO Cooperation WG
+      class: Workgroup
+      subgroup:
+        IENWG:
+          name: COOPERATION BETWEEN THE EUROPEAN COMMISSION (EC) AND THE IHO
+          class: Workgroup
+    CSBWG:
+      name: CROWDSOURCED BATHYMETRY WORKING GROUP
+      class: Workgroup
+    IBSC:
+      name: FIG/IHO/ICA INTERNATIONAL BOARD ON STANDARDS OF COMPETENCE FOR HYDROGRAPHIC SURVEYORS AND NAUTICAL CARTOGRAPHERS
+      class: Committee
+    DCDB:
+      name: IHO Data Centre for Digital Bathymetry
+      class: Committee
+    GEBCO:
+      name: JOINT IHO-IOC GUIDING COMMITTEE FOR THE GENERAL BATHYMETRIC CHART OF THE OCEANS
+      class: Committee
+      subgroup:
+        GGC:
+          name: GEBCO Guiding Committee
+          class: Committee
+        SCUFN:
+          name: GEBCO SUB-COMMITTEE ON UNDERSEA FEATURE NAMES
+          class: Committee
+        TSCOM:
+          name: GEBCO TECHNICAL SUB-COMMITTEE ON OCEAN MAPPING
+          class: Committee
+        SCRUM:
+          name: SUB-COMMITTEE ON REGIONAL UNDERSEA MAPPING
+          class: Committee
+        SCOPE:
+          name: SUB-COMMITTEE ON COMMUNICATIONS, OUTREACH AND PUBLIC ENGAGEMENT
+          class: Committee
+Council:
+  class: Committee
+  subgroup:
+    SPRWG:
+      name: Strategic Plan Review Working Group
+      class: Workgroup
+IHR:
+  name: International Hydrography Review
+  class: Committee
+  subgroup:
+    IHR:
+      name: International Hydrography Review
+      class: Committee
+    IHREB:
+      name: International Hydrography Review Editorial Board
+      class: Committee
+BUREAU:
+  name: International Hydrography Bureau
+  class: Committee
+IMO MSC:
+  name: Maritime Safety Committee
+  class: Committee
+  subgroup:
+    NCSR:
+      name: Sub-Committee on Navigation, Communications and Search and Rescue
+      class: Committee
+DCDB:
+  name: IHO Data Centre for Digital Bathymetry
+  class: Committee

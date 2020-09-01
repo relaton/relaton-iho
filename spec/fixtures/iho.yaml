@@ -1,5 +1,14 @@
 ---
 id: B-11
+title:
+- type: main
+  content: IHO-IOC GEBCO Cook Book
+  language: en
+  format: text/plain
+- type: main
+  content: Livre de recettes GEBCO OHI-COI
+  language: fr
+  format: text/plain
 link:
   content: https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf
   type: pdf
@@ -16,10 +25,12 @@ contributor:
     name: International Hydrographic Organization
     abbreviation: IHO
     url: www.iho.int
+  role: publisher
 - organization:
     name: Intergovernmental Oceanographic Commission
     abbreviation: IOC
     url: http://ioc-unesco.org
+  role: publisher
 edition: 1.0.0
 version:
   revision_date: 2019-10-31
@@ -62,10 +73,16 @@ validity:
   begins: 2019-10-31 00:00
 fetched: '2020-03-29'
 editorialgroup:
-  - committee: hssc
-    workgroup: WG1
-  - committee: irss
-    workgroup: WG2
+- - committee:
+      abbreviation: HSSC
+      name: Hydrographic Services and Standards Committee
+  - committee:
+      abbreviation: IRCC
+      name: Inter-Regional Coordination Committee
+      committee:
+        abbreviation: GEBCO
+        name: JOINT IHO-IOC GUIDING COMMITTEE FOR THE GENERAL BATHYMETRIC CHART OF
+          THE OCEANS
 commentperiod:
   from: '2011-01-01'
   to: '2011-12-31'
