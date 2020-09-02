@@ -42,8 +42,11 @@
     </define>
     <define name="xref">
       <element name="xref">
+        <!-- attribute target { xsd:IDREF }, -->
         <attribute name="target">
-          <data type="IDREF"/>
+          <data type="string">
+            <param name="pattern">\i\c*|\c+#\c+</param>
+          </data>
         </attribute>
         <optional>
           <attribute name="type">
@@ -923,6 +926,9 @@
         <attribute name="script"/>
       </optional>
       <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
         <attribute name="obligation">
           <choice>
             <value>normative</value>
@@ -961,9 +967,6 @@
   </define>
   <define name="content-subsection">
     <element name="clause">
-      <optional>
-        <attribute name="type"/>
-      </optional>
       <ref name="Content-Section"/>
     </element>
   </define>
@@ -993,6 +996,9 @@
       </attribute>
     </optional>
     <optional>
+      <attribute name="type"/>
+    </optional>
+    <optional>
       <ref name="section-title"/>
     </optional>
     <group>
@@ -1011,9 +1017,6 @@
   </define>
   <define name="clause">
     <element name="clause">
-      <optional>
-        <attribute name="type"/>
-      </optional>
       <ref name="Clause-Section"/>
     </element>
   </define>
@@ -1041,6 +1044,9 @@
           <value>informative</value>
         </choice>
       </attribute>
+    </optional>
+    <optional>
+      <attribute name="type"/>
     </optional>
     <optional>
       <ref name="section-title"/>
@@ -1179,6 +1185,9 @@
       </optional>
       <optional>
         <attribute name="script"/>
+      </optional>
+      <optional>
+        <attribute name="type"/>
       </optional>
       <optional>
         <attribute name="obligation">

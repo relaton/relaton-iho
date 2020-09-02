@@ -1,3 +1,5 @@
+require "jing"
+
 RSpec.describe RelatonIho do
   it "has a version number" do
     expect(RelatonIho::VERSION).not_to be nil
@@ -46,5 +48,11 @@ RSpec.describe RelatonIho do
       File.write file, xml, encoding: "UTF-8" unless File.exist? file
       expect(xml).to be_equivalent_to File.read(file, encoding: "UTF-8")
     end
+  end
+
+  it "check XML grammar" do
+    schema = Jing.new "spec/fixtures/isobib.rng"
+    errors = schema.validate "spec/fixtures/iho.xml"
+    expect(errors).to eq []
   end
 end

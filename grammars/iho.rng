@@ -23,8 +23,13 @@
     </define>
     <define name="editorialgroup">
       <element name="editorialgroup">
-        <ref name="committee"/>
-        <ref name="workgroup"/>
+        <oneOrMore>
+          <choice>
+            <ref name="committee"/>
+            <ref name="workgroup"/>
+            <ref name="commission"/>
+          </choice>
+        </oneOrMore>
       </element>
     </define>
     <define name="BibDataExtensionType">
@@ -94,16 +99,35 @@
   </include>
   <define name="committee">
     <element name="committee">
-      <choice>
-        <value>hssc</value>
-        <value>ircc</value>
-      </choice>
+      <ref name="IHO_Group"/>
     </element>
   </define>
   <define name="workgroup">
     <element name="workgroup">
+      <ref name="IHO_Group"/>
+    </element>
+  </define>
+  <define name="commission">
+    <element name="commission">
+      <ref name="IHO_Group"/>
+    </element>
+  </define>
+  <define name="IHO_Group">
+    <optional>
+      <element name="name">
+        <text/>
+      </element>
+    </optional>
+    <element name="abbreviation">
       <text/>
     </element>
+    <optional>
+      <choice>
+        <ref name="committee"/>
+        <ref name="workgroup"/>
+        <ref name="commission"/>
+      </choice>
+    </optional>
   </define>
   <define name="annex-appendix">
     <element name="appendix">
