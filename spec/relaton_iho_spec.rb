@@ -29,12 +29,12 @@ RSpec.describe RelatonIho do
       end
     end
 
-    # it "by slightly misspelled reference" do
-    #   VCR.use_cassette "iho_s63" do
-    #     result = RelatonIho::IhoBibliography.get "IHO S63"
-    #     expect(result).to be_instance_of RelatonIho::IhoBibliographicItem
-    #   end
-    # end
+    it "by slightly misspelled reference" do
+      VCR.use_cassette "iho_s63" do
+        result = RelatonIho::IhoBibliography.get "IHO S63"
+        expect(result.docidentifier.first.id).to eq "S-63"
+      end
+    end
   end
 
   context "bib instance" do

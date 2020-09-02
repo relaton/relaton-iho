@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://raw.githubusercontent.com/relaton/relaton-data-iho/master/data/s63.yaml
+    uri: https://raw.githubusercontent.com/relaton/relaton-data-iho/master/data/s-63.yaml
     body:
       encoding: US-ASCII
       string: ''
@@ -17,17 +17,21 @@ http_interactions:
       - raw.githubusercontent.com
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '14'
+      - '651'
       Content-Type:
       - text/plain; charset=utf-8
+      Cache-Control:
+      - max-age=300
       Content-Security-Policy:
       - default-src 'none'; style-src 'unsafe-inline'; sandbox
+      Etag:
+      - W/"280199987e14d8bfff20c622daf1b35b8f917e371f2d3fe44cc6d9f4f8024992"
       Strict-Transport-Security:
       - max-age=31536000
       X-Content-Type-Options:
@@ -40,31 +44,32 @@ http_interactions:
       - 1.1 varnish
       - 1.1 varnish (Varnish/6.0)
       X-Github-Request-Id:
-      - 6FD4:5D3B:2998CF:317B57:5F438627
+      - 3C14:BA31:2421910:266BA05:5F4FFB16
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 24 Aug 2020 09:19:35 GMT
+      - Wed, 02 Sep 2020 20:05:43 GMT
       X-Served-By:
-      - cache-hhn4022-HHN
+      - cache-hhn4028-HHN
       X-Cache:
       - MISS, MISS
       X-Cache-Hits:
       - 0, 0
       X-Timer:
-      - S1598260776.549999,VS0,VE170
+      - S1599077143.994182,VS0,VE185
       Vary:
-      - Authorization,Accept-Encoding
+      - Authorization,Accept-Encoding, Accept-Encoding
       Access-Control-Allow-Origin:
       - "*"
       X-Fastly-Request-Id:
-      - 6c915fc5bed42b344620e5c6d4ce9db5dd5a505d
+      - db9068e28ac06196d73935cd88fdb3568de70ffe
       Expires:
-      - Mon, 24 Aug 2020 09:24:35 GMT
+      - Wed, 02 Sep 2020 20:10:43 GMT
       Source-Age:
       - '0'
     body:
-      encoding: UTF-8
-      string: '404: Not Found'
-  recorded_at: Mon, 24 Aug 2020 09:19:35 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        LS0tCnRpdGxlOgotIHR5cGU6IG1haW4KICBjb250ZW50OiBJSE8gRGF0YSBQcm90ZWN0aW9uIFNjaGVtZQogIGxhbmd1YWdlOiBlbgotIHR5cGU6IG1haW4KICBjb250ZW50OiBEaXNwb3NpdGlmIGRlIGwnT0hJIHBvdXIgbGEgcHJvdGVjdGlvbiBkZXMgZG9ubsOpZXMKICBsYW5ndWFnZTogZnIKZWRpdG9yaWFsZ3JvdXA6Ci0gLSBjb21taXR0ZWU6CiAgICAgIGFiYnJldmlhdGlvbjogSFNTQwogICAgICBuYW1lOiBIeWRyb2dyYXBoaWMgU2VydmljZXMgYW5kIFN0YW5kYXJkcyBDb21taXR0ZWUKICAtIGNvbW1pdHRlZToKICAgICAgYWJicmV2aWF0aW9uOiBIU1NDCiAgICAgIG5hbWU6IEh5ZHJvZ3JhcGhpYyBTZXJ2aWNlcyBhbmQgU3RhbmRhcmRzIENvbW1pdHRlZQogICAgICB3b3JrZ3JvdXA6CiAgICAgICAgYWJicmV2aWF0aW9uOiBFTkNXRwogICAgICAgIG5hbWU6IEVOQyBTVEFOREFSRFMgTUFJTlRFTkFOQ0UgV09SS0lORyBHUk9VUAp0eXBlOiBzdGFuZGFyZApkb2NpZDoKICB0eXBlOiBJSE8KICBpZDogUy02Mwpkb2NudW1iZXI6IDYzCmVkaXRpb246IDEuMi4xCmRvY3N0YXR1czoKICBzdGFnZToKICAgIHZhbHVlOiBpbi1mb3JjZQpsYW5ndWFnZToKLSBlbgotIGZyCnNjcmlwdDogTGF0bgp2ZXJzaW9uOgogIHJldmlzaW9uX2RhdGU6IDIwMjAtMDMtMDEKZGF0ZToKICB0eXBlOiBwdWJsaXNoZWQKICBmcm9tOiAyMDIwLTAzLTAxCmNvcHlyaWdodDoKLSBvd25lcjoKICAgIG5hbWU6IEludGVybmF0aW9uYWwgSHlkcm9ncmFwaGljIE9yZ2FuaXphdGlvbgogICAgYWJicmV2aWF0aW9uOiBJSE8KICAgIHVybDogd3d3Lmloby5pbnQKICBmcm9tOiAyMDIwCmxpbms6Ci0gdHlwZTogcGRmCiAgY29udGVudDogaHR0cHM6Ly9paG8uaW50L3VwbG9hZHMvdXNlci9wdWJzL3N0YW5kYXJkcy9zLTYzL1MtNjNfMjAyMF9FZDEuMi4xX0VOX0RyYWZ0X0NsZWFuLnBkZgpwbGFjZTogTW9uYWNvCnZhbGlkaXR5OgogIGJlZ2luczogMjAyMC0wMy0wMQpjb250cmlidXRvcjoKLSBvcmdhbml6YXRpb246CiAgICBuYW1lOiBJbnRlcm5hdGlvbmFsIEh5ZHJvZ3JhcGhpYyBPcmdhbml6YXRpb24KICAgIGFiYnJldmlhdGlvbjogSUhPCiAgICB1cmw6IHd3dy5paG8uaW50CiAgcm9sZTogcHVibGlzaGVyCnNlcmllczoKICBudW1iZXI6IFMKICB0eXBlOiBtYWluCiAgdGl0bGU6CiAgICB0eXBlOiBvcmlnaW5hbAogICAgY29udGVudDoKICAgIC0gY29udGVudDogU3RhbmRhcmRzIGFuZCBTcGVjaWZpY2F0aW9ucwogICAgICBsYW5ndWFnZTogZW4KICAgICAgc2NyaXB0OiBMYXRuCiAgICAtIGNvbnRlbnQ6IE5vcm1lcyBldCBTcMOpY2lmaWNhdGlvbnMKICAgICAgbGFuZ3VhZ2U6IGZyCiAgICAgIHNjcmlwdDogTGF0bgogIHBsYWNlOiBNb25hY28KICBvcmdhbml6YXRpb246IEludGVybmF0aW9uYWwgSHlkcm9ncmFwaGljIE9yZ2FuaXphdGlvbgpmZXRjaGVkOiAyMDIwLTAzLTI5Cg==
+  recorded_at: Wed, 02 Sep 2020 20:05:43 GMT
 recorded_with: VCR 6.0.0
