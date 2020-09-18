@@ -31,15 +31,15 @@ RSpec.describe RelatonIho::IHOGroup do
 
     it "and render AsciiBib" do
       ab = subject.to_asciibib "editorialgroup"
-      expect(ab).to eq <<-ASCIIBIB
-editorialgroup.committee.abbreviation:: IRCC
-editorialgroup.committee.name:: Inter-Regional Coordination Committee
-editorialgroup.committee.commission.abbreviation:: RHCs
-editorialgroup.committee.commission.name:: Regional Hydrographic Commissions
-editorialgroup.committee.commission.commission.abbreviation:: SWPHC
-editorialgroup.committee.commission.commission.name:: South-West Pacific HC
-editorialgroup.committee.commission.commission.workgroup.abbreviation:: ICCWG
-editorialgroup.committee.commission.commission.workgroup.name:: International Charting Coordination Working Group
+      expect(ab).to eq <<~ASCIIBIB
+        editorialgroup.committee.abbreviation:: IRCC
+        editorialgroup.committee.name:: Inter-Regional Coordination Committee
+        editorialgroup.committee.commission.abbreviation:: RHCs
+        editorialgroup.committee.commission.name:: Regional Hydrographic Commissions
+        editorialgroup.committee.commission.commission.abbreviation:: SWPHC
+        editorialgroup.committee.commission.commission.name:: South-West Pacific HC
+        editorialgroup.committee.commission.commission.workgroup.abbreviation:: ICCWG
+        editorialgroup.committee.commission.commission.workgroup.name:: International Charting Coordination Working Group
       ASCIIBIB
     end
   end

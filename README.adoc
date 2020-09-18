@@ -32,7 +32,7 @@ Or install it yourself as:
 
 [source,sh]
 ----
-$ gem install relaton_iho
+$ gem install relaton-iho
 ----
 
 == Usage
@@ -41,11 +41,13 @@ $ gem install relaton_iho
 
 [source,ruby]
 ----
-hits = RelatonIho::IhoBibliography.search("OGC 19-025r1")
-=> [<RelatonIho::Hit:0x007fcab6b9aab8 @text="OGC 19-025r1" @fetched="false" @fullIdentifier="" @title="">]
+pry(main)> require 'relaton_iho'
+=> true
 
-tem = hits[0].fetch
-=> #<RelatonIho::IhoBibliographicItem:0x007fcab3cb4758
+item = RelatonIho::IhoBibliography.search("B-11")
+[relaton-iho] ("B-11") fetching...
+[relaton-iho] ("B-11") found B-11
+=> #<RelatonIho::IhoBibliographicItem:0x007fe74fc80800
 ...
 ----
 
@@ -53,14 +55,12 @@ tem = hits[0].fetch
 [source,ruby]
 ----
 item.to_xml
-=> "<bibitem id="19-025r1" type="standard">
-      <title type="title-main" format="text/plain" language="en" script="Latn">Development of Spatial Data Infrastructures for Marine Data Management</title>
-      <title type="main" format="text/plain" language="en" script="Latn">Development of Spatial Data Infrastructures for Marine Data Management</title>
-      <uri type="obp">https://portal.opengeospatial.org/files/?artifact_id=88037</uri>
-      <docidentifier type="OGC">19-025r1</docidentifier>
-      <date type="published">
-        <on>2019</on>
-      </date>
+=> "<bibitem id="B-11" type="standard">
+      <fetched>2020-03-29</fetched>
+      <title type="main" format="text/plain" language="en">IHO-IOC GEBCO Cook Book</title>
+      <title type="main" format="text/plain" language="fr">Livre de recettes GEBCO OHI-COI</title>
+      <uri type="pdf">https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf</uri>
+      <docidentifier type="IHO">B-11</docidentifier>
       ...
     </bibitem>"
 ----
@@ -69,33 +69,45 @@ With argument `bibdata: true` it ouputs XML wrapped by `bibdata` element and add
 ----
 item.to_xml bibdata: true
 => "<bibdata type="standard">
-      <title type="title-main" format="text/plain" language="en" script="Latn">Development of Spatial Data Infrastructures for Marine Data Management</title>
-      <title type="main" format="text/plain" language="en" script="Latn">Development of Spatial Data Infrastructures for Marine Data Management</title>
-      <uri type="obp">https://portal.opengeospatial.org/files/?artifact_id=88037</uri>
-      <docidentifier type="OGC">19-025r1</docidentifier>
-      <date type="published\">
-        <on>2019</on>
-      </date>
+      <fetched>2020-03-29</fetched>
+      <title type="main" format="text/plain" language="en">IHO-IOC GEBCO Cook Book</title>
+      <title type="main" format="text/plain" language="fr">Livre de recettes GEBCO OHI-COI</title>
+      <uri type="pdf">https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf</uri>
+      <docidentifier type="IHO">B-11</docidentifier>
       ...
       <ext>
-        <doctype>public-engineering-report</doctype>
+        <editorialgroup>
+      <committee>
+        <name>Hydrographic Services and Standards Committee</name>
+        <abbreviation>HSSC</abbreviation>
+      </committee>
+      <committee>
+        <name>Inter-Regional Coordination Committee</name>
+        <abbreviation>IRCC</abbreviation>
+        <committee>
+          <name>JOINT IHO-IOC GUIDING COMMITTEE FOR THE GENERAL BATHYMETRIC CHART OF THE OCEANS</name>
+          <abbreviation>GEBCO</abbreviation>
+        </committee>
+      </committee>
+    </editorialgroup>
       </ext>
     </bibdata>"
 ----
 
-=== Get code, and year
+=== Get code
 [source,ruby]
 ----
-RelatonIho::IhoBibliography.get "OGC 19-025r1", "2019", {}
-fetching OGC 19-025r1...
-=> #<RelatonIho::IhoBibliographicItem:0x007fc322e9aba0
+RelatonIho::IhoBibliography.get "IHO B-11"
+[relaton-iho] ("IHO B-11") fetching...
+[relaton-iho] ("IHO B-11") found B-11
+=> #<RelatonIho::IhoBibliographicItem:0x007fe78dbb7c78
 ...
 ----
 
 === Create bibliographic item from XML
 [source,ruby]
 ----
-RelatonIho::XMLParser.from_xml File.read('spec/fixtures/ogc_bib_item.xml')
+RelatonIho::XMLParser.from_xml File.read('spec/fixtures/iho.xml')
 => #<RelatonIho::IhoBibliographicItem:0x007fc322ea82c8
 ...
 ----
@@ -103,12 +115,12 @@ RelatonIho::XMLParser.from_xml File.read('spec/fixtures/ogc_bib_item.xml')
 === Create bibliographic item from YAML
 [source,ruby]
 ----
-hash = YAML.load_file 'spec/fixtures/ogc_bib_item.yml'
-=> {"id"=>"19-025r1",
+hash = YAML.load_file 'spec/fixtures/iho.yaml'
+=> {"id"=>"B-11",
 ...
 
 bib_hash = RelatonIho::HashConverter.hash_to_bib hash
-=> {:id=>"19-025r1",
+=> {:id=>"B-11",
 ...
 
 RelatonIho::IhoBibliographicItem.new bib_hash

@@ -21,7 +21,7 @@ module RelatonIho
         item
       rescue SocketError, Errno::EINVAL, Errno::ECONNRESET, EOFError,
              Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError,
-             Net::ProtocolError, Net::ReadTimeout, OpenSSL::SSL::SSLError,
+             Net::ProtocolError, Net::ReadTimeout, # OpenSSL::SSL::SSLError,
              Errno::ETIMEDOUT => e
         raise RelatonBib::RequestError, "Could not access #{uri}: #{e.message}"
       end
