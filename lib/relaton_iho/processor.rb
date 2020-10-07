@@ -35,7 +35,7 @@ module RelatonIho
     # Returns hash of XML grammar
     # @return [String]
     def grammar_hash
-      @grammar_hash ||= ::RelatonIeee.grammar_hash
+      @grammar_hash ||= ::RelatonIho.grammar_hash
     end
   end
 end
