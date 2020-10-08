@@ -15,6 +15,12 @@ module RelatonIho
 
       private
 
+      # @param item_hash [Hash]
+      # @return [RelatonBib::BibliographicItem]
+      def bib_item(item_hash)
+        IhoBibliographicItem.new item_hash
+      end
+
       # @param ret [Hash]
       def commentperiod_hash_to_bib(ret)
         ret[:commentperiod] &&= CommentPeriond.new(ret[:commentperiod])
