@@ -25,14 +25,14 @@ docstatus.stage:: in-force
 date.type:: published
 date.from:: 2020-01-20
 copyright::
-copyright.owner.name.content:: International Hydrographic Organization
-copyright.owner.abbreviation.content:: IHO
+copyright.owner.name:: International Hydrographic Organization
+copyright.owner.abbreviation:: IHO
 copyright.owner.url:: www.iho.int
 copyright.role.type:: publisher
 copyright.from:: 2019
 copyright::
-copyright.owner.name.content:: Intergovernmental Oceanographic Commission
-copyright.owner.abbreviation.content:: IOC
+copyright.owner.name:: Intergovernmental Oceanographic Commission
+copyright.owner.abbreviation:: IOC
 copyright.owner.url:: http://ioc-unesco.org
 copyright.role.type:: publisher
 copyright.from:: 2019
@@ -41,13 +41,13 @@ link.content:: https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/document
 place.name:: Monaco
 validity.begins:: 2019-10-31 00:00
 contributor::
-contributor.organization.name.content:: International Hydrographic Organization
-contributor.organization.abbreviation.content:: IHO
+contributor.organization.name:: International Hydrographic Organization
+contributor.organization.abbreviation:: IHO
 contributor.organization.url:: www.iho.int
 contributor.role.type:: publisher
 contributor::
-contributor.organization.name.content:: Intergovernmental Oceanographic Commission
-contributor.organization.abbreviation.content:: IOC
+contributor.organization.name:: Intergovernmental Oceanographic Commission
+contributor.organization.abbreviation:: IOC
 contributor.organization.url:: http://ioc-unesco.org
 contributor.role.type:: publisher
 series.type:: main
