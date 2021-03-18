@@ -40,7 +40,7 @@ RSpec.describe RelatonIho::EditorialGroup do
     }
 
     bib_hash = RelatonIho::HashConverter.hash_to_bib hash
-    item = RelatonIho::IhoBibliographicItem.new bib_hash
+    item = RelatonIho::IhoBibliographicItem.new **bib_hash
     expect(item.to_hash).to eq hash
   end
 end

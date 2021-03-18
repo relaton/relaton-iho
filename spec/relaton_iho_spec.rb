@@ -42,7 +42,7 @@ RSpec.describe RelatonIho do
     let(:bib_hash) { RelatonIho::HashConverter.hash_to_bib hash }
 
     it "create item form hash" do
-      item = RelatonIho::IhoBibliographicItem.new bib_hash
+      item = RelatonIho::IhoBibliographicItem.new **bib_hash
       xml = item.to_xml bibdata: true
       file = "spec/fixtures/iho.xml"
       File.write file, xml, encoding: "UTF-8" unless File.exist? file

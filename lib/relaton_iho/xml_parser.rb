@@ -18,10 +18,10 @@ module RelatonIho
       # @param item_hash [Hash]
       # @return [RelatonIho::IhoBibliographicItem]
       def bib_item(item_hash)
-        IhoBibliographicItem.new item_hash
+        IhoBibliographicItem.new **item_hash
       end
 
-      # @param ext [Nokogiri::XML::Element]
+      # @param ext [Nokogiri::XML::Element, nil]
       # @return [RelatonIho::EditorialGroupCollection, nil]
       def fetch_editorialgroup(ext)
         return unless ext
@@ -35,7 +35,7 @@ module RelatonIho
         EditorialGroupCollection.new egs if egs.any?
       end
 
-      # @param ext [Nokogiri::XML::Element. nil]
+      # @param ihgrp [Nokogiri::XML::Element, nil]
       # @return [RelatonIho::Committee, RelatonIho::Commission,
       #   RelatonIho::Workgroup, nil]
       def iho_group(ihgrp)

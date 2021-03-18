@@ -16,7 +16,7 @@ module RelatonIho
         return unless resp.code == "200"
 
         hash = HashConverter.hash_to_bib YAML.safe_load(resp.body, [Date])
-        item = IhoBibliographicItem.new hash
+        item = IhoBibliographicItem.new **hash
         warn "[relaton-iho] (\"#{text}\") found #{item.docidentifier.first.id}"
         item
       rescue SocketError, Errno::EINVAL, Errno::ECONNRESET, EOFError,

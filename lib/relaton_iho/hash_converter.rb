@@ -23,7 +23,7 @@ module RelatonIho
 
       # @param ret [Hash]
       def commentperiod_hash_to_bib(ret)
-        ret[:commentperiod] &&= CommentPeriond.new(ret[:commentperiod])
+        ret[:commentperiod] &&= CommentPeriond.new(**ret[:commentperiod])
       end
 
       # @param ret [Hash]
