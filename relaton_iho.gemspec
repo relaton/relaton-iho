@@ -21,8 +21,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
 
-  # s.add_development_dependency "byebug"
-  s.add_development_dependency "debase"
+  s.add_development_dependency "byebug"
+  # s.add_development_dependency "debase"
   s.add_development_dependency "equivalent-xml", "~> 0.6"
   s.add_development_dependency "rake", "~> 10.0"
   s.add_development_dependency "rspec", "~> 3.0"
