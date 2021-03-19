@@ -13,6 +13,13 @@ module RelatonIho
       super
     end
 
+    # @param hash [Hash]
+    # @return [RelatonIho::IhoBibliographicItem]
+    def self.from_hash(hash)
+      item_hash = ::RelatonIho::HashConverter.hash_to_bib(hash)
+      new **item_hash
+    end
+
     # @param opts [Hash]
     # @option opts [Nokogiri::XML::Builder] :builder XML builder
     # @option opts [Boolean] :bibdata

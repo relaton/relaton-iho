@@ -119,11 +119,7 @@ hash = YAML.load_file 'spec/fixtures/iho.yaml'
 => {"id"=>"B-11",
 ...
 
-bib_hash = RelatonIho::HashConverter.hash_to_bib hash
-=> {:id=>"B-11",
-...
-
-RelatonIho::IhoBibliographicItem.new bib_hash
+RelatonIho::IhoBibliographicItem.from_hash hash
 => #<RelatonIho::IhoBibliographicItem:0x007fc322ef8548
 ...
 ----
