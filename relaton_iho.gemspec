@@ -19,18 +19,16 @@ Gem::Specification.new do |s|
   end
   s.platform      = Gem::Platform::RUBY
   s.require_paths = ["lib"]
-  s.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
+  s.required_ruby_version = Gem::Requirement.new(">= 2.5.0")
 
   s.add_development_dependency "byebug"
-  # s.add_development_dependency "debase"
   s.add_development_dependency "equivalent-xml", "~> 0.6"
   s.add_development_dependency "rake", "~> 10.0"
   s.add_development_dependency "rspec", "~> 3.0"
-  # s.add_development_dependency "ruby-debug-ide"
   s.add_development_dependency "ruby-jing"
   s.add_development_dependency "simplecov"
   s.add_development_dependency "vcr"
   s.add_development_dependency "webmock"
 
-  s.add_dependency "relaton-bib", "~> 1.8.0"
+  s.add_dependency "relaton-bib", "~> 1.9.0"
 end
