@@ -15,7 +15,7 @@ module RelatonIho
         resp = Net::HTTP.get_response uri
         return unless resp.code == "200"
 
-        hash = HashConverter.hash_to_bib YAML.safe_load(resp.body, [Date])
+        hash = HashConverter.hash_to_bib YAML.safe_load(resp.body, permitted_classes: [Date])
         item = IhoBibliographicItem.new **hash
         warn "[relaton-iho] (\"#{text}\") found #{item.docidentifier.first.id}"
         item

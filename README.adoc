@@ -104,6 +104,16 @@ RelatonIho::IhoBibliography.get "IHO B-11"
 ...
 ----
 
+=== Typed links
+
+Each IHO document has `html`, `website`, or `pdf` type link.
+
+[source,ruby]
+----
+item.link
+=> [#<RelatonBib::TypedUri:0x00007fb5162d1478 @content=#<Addressable::URI:0x8c0 URI:https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf>, @type="pdf">]
+----
+
 === Create bibliographic item from XML
 [source,ruby]
 ----
