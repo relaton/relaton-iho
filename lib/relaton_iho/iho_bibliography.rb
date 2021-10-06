@@ -10,13 +10,18 @@ module RelatonIho
       # @return [RelatonIho::IhoBibliographicItem]
       def search(text, _year = nil, _opts = {}) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
         warn "[relaton-iho] (\"#{text}\") fetching..."
-        ref = text.sub(/^IHO\s/, "").downcase.sub /^([[:alpha:]]+)(\d+)/, '\1-\2'
+        ref = text.sub(/^IHO\s/, "").downcase.sub(/^([[:alpha:]]+)(\d+)/, '\1-\2')
         uri = URI("#{ENDPOINT}#{ref}.yaml")
         resp = Net::HTTP.get_response uri
         return unless resp.code == "200"
 
-        hash = HashConverter.hash_to_bib YAML.safe_load(resp.body, permitted_classes: [Date])
-        item = IhoBibliographicItem.new **hash
+        yaml = if RUBY_VERSION.match?(/^2\.5/)
+                 YAML.safe_load(resp.body, [Date])
+               else
+                 YAML.safe_load(resp.body, permitted_classes: [Date])
+               end
+        hash = HashConverter.hash_to_bib yaml
+        item = IhoBibliographicItem.new(**hash)
         warn "[relaton-iho] (\"#{text}\") found #{item.docidentifier.first.id}"
         item
       rescue SocketError, Errno::EINVAL, Errno::ECONNRESET, EOFError,
