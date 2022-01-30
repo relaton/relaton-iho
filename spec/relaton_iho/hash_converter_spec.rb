@@ -2,7 +2,7 @@ RSpec.describe RelatonIho::EditorialGroup do
   it "convert editorial group & comment period" do
     hash = {
       "editorialgroup" => [
-        {
+        [{
           "committee" => {
             "abbreviation" => "HSSC",
             "name" => "Hydrographic Services and Standards Committee",
@@ -11,7 +11,7 @@ RSpec.describe RelatonIho::EditorialGroup do
               "name" => "S-100 Working Group",
             },
           },
-        },
+        }],
         [
           {
             "committee" => {
@@ -40,7 +40,7 @@ RSpec.describe RelatonIho::EditorialGroup do
     }
 
     bib_hash = RelatonIho::HashConverter.hash_to_bib hash
-    item = RelatonIho::IhoBibliographicItem.new **bib_hash
+    item = RelatonIho::IhoBibliographicItem.new(**bib_hash)
     expect(item.to_hash).to eq hash
   end
 end

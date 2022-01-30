@@ -18,7 +18,7 @@ module RelatonIho
       # @param item_hash [Hash]
       # @return [RelatonIho::IhoBibliographicItem]
       def bib_item(item_hash)
-        IhoBibliographicItem.new **item_hash
+        IhoBibliographicItem.new(**item_hash)
       end
 
       # @param ext [Nokogiri::XML::Element, nil]

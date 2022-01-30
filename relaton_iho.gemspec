@@ -23,12 +23,12 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "byebug"
   s.add_development_dependency "equivalent-xml", "~> 0.6"
-  s.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "rake", "~> 13.0"
   s.add_development_dependency "rspec", "~> 3.0"
   s.add_development_dependency "ruby-jing"
   s.add_development_dependency "simplecov"
   s.add_development_dependency "vcr"
   s.add_development_dependency "webmock"
 
-  s.add_dependency "relaton-bib", "~> 1.9.0"
+  s.add_dependency "relaton-bib", "~> 1.10.0"
 end
