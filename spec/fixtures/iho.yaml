@@ -16,6 +16,7 @@ type: standard
 docid:
   id: B-11
   type: IHO
+  primary: true
 docnumber: 11
 date:
   type: published

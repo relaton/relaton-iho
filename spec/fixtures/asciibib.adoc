@@ -14,6 +14,7 @@ title.language:: fr
 title.format:: text/plain
 type:: standard
 docid.type:: IHO
+docid.primary:: true
 docid.id:: B-11
 docnumber:: 11
 edition:: 1.0.0

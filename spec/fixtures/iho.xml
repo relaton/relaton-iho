@@ -3,7 +3,7 @@
   <title type="main" format="text/plain" language="en">IHO-IOC GEBCO Cook Book</title>
   <title type="main" format="text/plain" language="fr">Livre de recettes GEBCO OHI-COI</title>
   <uri type="pdf">https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf</uri>
-  <docidentifier type="IHO">B-11</docidentifier>
+  <docidentifier type="IHO" primary="true">B-11</docidentifier>
   <docnumber>11</docnumber>
   <date type="published">
     <from>2020-01-20</from>
