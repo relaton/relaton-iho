@@ -15,10 +15,10 @@ module RelatonIho
         resp = Net::HTTP.get_response uri
         return unless resp.code == "200"
 
-        yaml = if RUBY_VERSION.match?(/^2\.5/)
-                 YAML.safe_load(resp.body, [Date])
-               else
+        yaml = if Gem::Version.new(Psych::VERSION) >= Gem::Version.new("3.1.0.pre1")
                  YAML.safe_load(resp.body, permitted_classes: [Date])
+               else
+                 YAML.safe_load(resp.body, [Date])
                end
         hash = HashConverter.hash_to_bib yaml
         item = IhoBibliographicItem.new(**hash)
