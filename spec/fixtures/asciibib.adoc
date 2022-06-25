@@ -17,7 +17,7 @@ docid.type:: IHO
 docid.primary:: true
 docid.id:: B-11
 docnumber:: 11
-edition:: 1.0.0
+edition.content:: 1.0.0
 language:: en
 language:: fr
 script:: Latn
