@@ -5,7 +5,7 @@ module RelatonIho
       # @param args [Hash]
       # @param nested [TrueClass, FalseClass]
       # @return [Hash]
-      def hash_to_bib(args, nested = false)
+      def hash_to_bib(args)
         ret = super
         return if ret.nil?
 
@@ -31,8 +31,8 @@ module RelatonIho
         eg = ret[:editorialgroup]
         return unless eg.is_a?(Hash) || eg&.any?
 
-        collection = array(eg).map do |g|
-          EditorialGroup.new(array(g).map { |wg| iho_workgroup wg })
+        collection = RelatonBib.array(eg).map do |g|
+          EditorialGroup.new(RelatonBib.array(g).map { |wg| iho_workgroup wg })
         end
         ret[:editorialgroup] = EditorialGroupCollection.new collection
       end
