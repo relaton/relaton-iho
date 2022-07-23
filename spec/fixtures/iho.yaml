@@ -34,8 +34,8 @@ contributor:
   role: publisher
 edition: 1.0.0
 version:
-  revision_date: 2019-10-31
-revdate: 2019-10-31
+  revision_date: '2019-10-31'
+revdate: '2019-10-31'
 language:
 - en
 - fr
