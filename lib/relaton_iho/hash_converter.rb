@@ -45,9 +45,8 @@ module RelatonIho
         return unless key && value.is_a?(Hash)
 
         klass = Object.const_get "RelatonIho::#{key.capitalize}"
-        subwg = value.select do |k, _|
-          %i[committee workgroup commission].include? k
-        end
+        wgs = %i[committee workgroup commission]
+        subwg = value.select { |k, _| wgs.include? k }
         klass.new value[:abbreviation], value[:name], iho_workgroup(subwg)
       end
     end
