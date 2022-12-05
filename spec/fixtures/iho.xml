@@ -1,4 +1,4 @@
-<bibdata type="standard">
+<bibdata type="standard" schema-version="v1.2.1">
   <fetched>2020-03-29</fetched>
   <title type="main" format="text/plain" language="en">IHO-IOC GEBCO Cook Book</title>
   <title type="main" format="text/plain" language="fr">Livre de recettes GEBCO OHI-COI</title>
@@ -67,7 +67,7 @@
   <validity>
     <validityBegins>2019-10-31 00:00</validityBegins>
   </validity>
-  <ext>
+  <ext schema-version="v1.0.0">
     <editorialgroup>
       <committee>
         <name>Hydrographic Services and Standards Committee</name>

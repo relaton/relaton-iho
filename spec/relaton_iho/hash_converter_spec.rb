@@ -1,6 +1,13 @@
-RSpec.describe RelatonIho::EditorialGroup do
+RSpec.describe RelatonIho::HashConverter do
+  it "returns IHO bibliographic item" do
+    hash = { title: ["IHO S-63"] }
+    item = described_class.send :bib_item, **hash
+    expect(item).to be_instance_of RelatonIho::IhoBibliographicItem
+  end
+
   it "convert editorial group & comment period" do
     hash = {
+      "schema-version" => "v1.2.1",
       "editorialgroup" => [
         [{
           "committee" => {
@@ -37,6 +44,7 @@ RSpec.describe RelatonIho::EditorialGroup do
       "commentperiod" => { "from" => "2011-02-01", "to" => "2015-12-31" },
       "fetched" => Date.today.to_s,
       "type" => "standard",
+      "ext" => {"schema-version"=>"v1.0.0"},
     }
 
     bib_hash = RelatonIho::HashConverter.hash_to_bib hash

@@ -17,8 +17,8 @@ module RelatonIho
 
       # @param item_hash [Hash]
       # @return [RelatonBib::BibliographicItem]
-      def bib_item(item_hash)
-        IhoBibliographicItem.new item_hash
+      def bib_item(**item_hash)
+        IhoBibliographicItem.new(**item_hash)
       end
 
       # @param ret [Hash]

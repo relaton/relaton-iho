@@ -15,12 +15,9 @@ module RelatonIho
         resp = Net::HTTP.get_response uri
         return unless resp.code == "200"
 
-        yaml = if Gem::Version.new(Psych::VERSION) >= Gem::Version.new("3.1.0.pre1")
-                 YAML.safe_load(resp.body, permitted_classes: [Date])
-               else
-                 YAML.safe_load(resp.body, [Date])
-               end
+        yaml = RelatonBib.parse_yaml resp.body, [Date]
         hash = HashConverter.hash_to_bib yaml
+        hash[:fetched] = Date.today.to_s
         item = IhoBibliographicItem.new(**hash)
         warn "[relaton-iho] (\"#{text}\") found #{item.docidentifier.first.id}"
         item

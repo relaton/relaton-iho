@@ -13,11 +13,20 @@ module RelatonIho
       super
     end
 
+    #
+    # Fetch flavor schema version
+    #
+    # @return [String] flavor schema version
+    #
+    def ext_schema
+      @ext_schema ||= schema_versions["relaton-model-iho"]
+    end
+
     # @param hash [Hash]
     # @return [RelatonIho::IhoBibliographicItem]
     def self.from_hash(hash)
       item_hash = ::RelatonIho::HashConverter.hash_to_bib(hash)
-      new **item_hash
+      new(**item_hash)
     end
 
     # @param opts [Hash]
@@ -29,12 +38,13 @@ module RelatonIho
       super ext: !commentperiod.nil?, **opts do |b|
         if opts[:bibdata] && (doctype || editorialgroup&.presence? ||
                               ics.any? || commentperiod)
-          b.ext do
+          ext = b.ext do
             b.doctype doctype if doctype
             editorialgroup&.to_xml b
             ics.each { |i| i.to_xml b }
             commentperiod&.to_xml b
           end
+          ext["schema-version"] = ext_schema unless opts[:embedded]
         end
       end
     end
