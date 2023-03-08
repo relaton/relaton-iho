@@ -37,6 +37,12 @@ RSpec.describe RelatonIho do
         expect(result.docidentifier.first.id).to eq "S-63"
       end
     end
+
+    it "by code and edition", vcr: { cassette_name: "code_and_edition" } do
+      result = RelatonIho::IhoBibliography.get "IHO B-6 4.2.0"
+      expect(result.docidentifier.first.id).to eq "B-6"
+      expect(result.edition.content).to eq "4.2.0"
+    end
   end
 
   context "bib instance" do
