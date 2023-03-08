@@ -1,6 +1,7 @@
 require "digest/md5"
 require "yaml"
 require "relaton_bib"
+require "relaton/index"
 require "relaton_iho/version"
 require "relaton_iho/iho_bibliography"
 require "relaton_iho/hash_converter"

@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.email         = ["open.source@ribose.com"]
   s.homepage      = "https://github.com/relaton/relaton-iho"
   s.licenses      = "BSD-2-Clause"
-  s.summary       = "RelatonIho: retrieve IHO Standards for bibliographic "\
+  s.summary       = "RelatonIho: retrieve IHO Standards for bibliographic " \
                     "using the BibliographicItem model"
-  s.description   = "RelatonIho: retrieve IHO Standards for bibliographic "\
+  s.description   = "RelatonIho: retrieve IHO Standards for bibliographic " \
                     "using the BibliographicItem model"
 
   s.files         = Dir.chdir(File.expand_path(__dir__)) do
@@ -21,14 +21,10 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.required_ruby_version = Gem::Requirement.new(">= 2.6.0")
 
-  s.add_development_dependency "byebug"
   s.add_development_dependency "equivalent-xml", "~> 0.6"
   s.add_development_dependency "rake", "~> 13.0"
   s.add_development_dependency "rspec", "~> 3.0"
-  s.add_development_dependency "ruby-jing"
-  s.add_development_dependency "simplecov"
-  s.add_development_dependency "vcr"
-  s.add_development_dependency "webmock"
 
   s.add_dependency "relaton-bib", "~> 1.14.0"
+  s.add_dependency "relaton-index", "~> 0.1.0"
 end

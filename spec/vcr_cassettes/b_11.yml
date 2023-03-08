@@ -2,6 +2,75 @@
 http_interactions:
 - request:
     method: get
+    uri: https://raw.githubusercontent.com/relaton/relaton-data-iho/master/index.zip
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '596'
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - default-src 'none'; style-src 'unsafe-inline'; sandbox
+      Content-Type:
+      - application/zip
+      Etag:
+      - W/"b3c0132e397bef6a08e99d0237729e6cc9aebedd927493533164f7097387d140"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Github-Request-Id:
+      - FD86:9232:1794F8:21CFD4:6407BCD7
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 07 Mar 2023 23:05:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-iad-kcgs7200039-IAD
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      X-Timer:
+      - S1678230345.379785,VS0,VE75
+      Vary:
+      - Authorization,Accept-Encoding,Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fastly-Request-Id:
+      - 7c26d17dd20e4e16f84bf2d3924f44c07555557a
+      Expires:
+      - Tue, 07 Mar 2023 23:10:45 GMT
+      Source-Age:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        UEsDBBQAAAAIAE6cZ1bcbTmKqgEAACEJAAAKABwAaW5kZXgueWFtbFVUCQADxJEHZMSRB2R1eAsAAQTpAwAABHsAAAB11UFuAjEMBdA9p8gFDBMncSbsoGukSj0BFCohMQhpumhv32TEonw76zyc5NthiGhFbns9b92e/Mq57df1dtm68/H7uDmRX/8ep9s/MWgyoPHOr4e1IVU1dlxl0JJBxgp9MWpGgOLimg0n4LISGcSoxAiiKFFexBv5YEbxWRdQSk8KyryEZsgMMmaXTRlf5YF8i1fBCdp/oOyCUXDCGTgQLxBDnojBBfMuEwW18Wi614u8k98wDvGDPPHgy5AGrzV3tPdaawoiKZFAiBICIi9zoN3rTT9q5EMddZ3J3FaUtZ9ks15ZNnvSLKP1tc16bmZ86U12T6At9mTG/4NmuvVYW/sVNhuUzV2rOsClawvYegTr5cykThC4UzQw7R4PDCvosAIGEOugjEbFiC66ZG4dlSydGYl48cRO6ojg25nrAkr8DFSD4aTcGbiEzUnjsq8hR5S7JXCdYzqi3C/SuMsJpAyddgs+TenNsWCnRZ9QMENpk87GCQWTlLic0KiJvZZkfhyqTEru7vfLz653o+cy/qp9+cz6AnLcdyqPmH/JnZoF56SUnnxO8h9QSwECHgMUAAAACABOnGdW3G05iqoBAAAhCQAACgAYAAAAAAABAAAApIEAAAAAaW5kZXgueWFtbFVUBQADxJEHZHV4CwABBOkDAAAEewAAAFBLBQYAAAAAAQABAFAAAADuAQAAAAA=
+  recorded_at: Tue, 07 Mar 2023 23:05:45 GMT
+- request:
+    method: get
     uri: https://raw.githubusercontent.com/relaton/relaton-data-iho/master/data/b-11.yaml
     body:
       encoding: US-ASCII
@@ -41,34 +110,34 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Github-Request-Id:
-      - C494:0A9A:A70E4E:E1B3BF:638D6CA9
+      - F3AE:2C6B:2546A2:303401:6407B9AE
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 05 Dec 2022 03:59:37 GMT
+      - Tue, 07 Mar 2023 23:05:52 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-atl18429-ATL
+      - cache-iad-kjyo7100165-IAD
       X-Cache:
-      - MISS
+      - HIT
       X-Cache-Hits:
-      - '0'
+      - '1'
       X-Timer:
-      - S1670212778.760240,VS0,VE100
+      - S1678230352.238562,VS0,VE104
       Vary:
       - Authorization,Accept-Encoding,Origin
       Access-Control-Allow-Origin:
       - "*"
       X-Fastly-Request-Id:
-      - e91c39f4df0f38c9b600d0da39410ffe4b2ab4e5
+      - 62b8e0fb4bd8c870d2518e98f065dfdcf3093c1f
       Expires:
-      - Mon, 05 Dec 2022 04:04:37 GMT
+      - Tue, 07 Mar 2023 23:10:52 GMT
       Source-Age:
       - '0'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         LS0tCnRpdGxlOgotIHR5cGU6IG1haW4KICBjb250ZW50OiBJSE8tSU9DIEdFQkNPIENvb2sgQm9vawogIGxhbmd1YWdlOiBlbgotIHR5cGU6IG1haW4KICBjb250ZW50OiBMaXZyZSBkZSByZWNldHRlcyBHRUJDTyBPSEktQ09JCiAgbGFuZ3VhZ2U6IGZyCmVkaXRvcmlhbGdyb3VwOgotIC0gY29tbWl0dGVlOgogICAgICBhYmJyZXZpYXRpb246IEhTU0MKICAgICAgbmFtZTogSHlkcm9ncmFwaGljIFNlcnZpY2VzIGFuZCBTdGFuZGFyZHMgQ29tbWl0dGVlCiAgLSBjb21taXR0ZWU6CiAgICAgIGFiYnJldmlhdGlvbjogSVJDQwogICAgICBuYW1lOiBJbnRlci1SZWdpb25hbCBDb29yZGluYXRpb24gQ29tbWl0dGVlCiAgICAgIGNvbW1pdHRlZToKICAgICAgICBhYmJyZXZpYXRpb246IEdFQkNPCiAgICAgICAgbmFtZTogSk9JTlQgSUhPLUlPQyBHVUlESU5HIENPTU1JVFRFRSBGT1IgVEhFIEdFTkVSQUwgQkFUSFlNRVRSSUMgQ0hBUlQgT0YKICAgICAgICAgIFRIRSBPQ0VBTlMKdHlwZTogc3RhbmRhcmQKZG9jaWQ6CiAgdHlwZTogSUhPCiAgaWQ6IEItMTEKICBwcmltYXJ5OiB0cnVlCmRvY251bWJlcjogMTEKZWRpdGlvbjoKICBjb250ZW50OiAxLjAuMApkb2NzdGF0dXM6CiAgc3RhZ2U6CiAgICB2YWx1ZTogaW4tZm9yY2UKbGFuZ3VhZ2U6Ci0gZW4KLSBmcgpzY3JpcHQ6IExhdG4KdmVyc2lvbjoKICByZXZpc2lvbl9kYXRlOiAnMjAxOS0xMC0zMScKZGF0ZToKICB0eXBlOiBwdWJsaXNoZWQKICBmcm9tOiAnMjAyMC0wMS0yMCcKY29weXJpZ2h0OgotIG93bmVyOgogICAgbmFtZTogSW50ZXJuYXRpb25hbCBIeWRyb2dyYXBoaWMgT3JnYW5pemF0aW9uCiAgICBhYmJyZXZpYXRpb246IElITwogICAgdXJsOiB3d3cuaWhvLmludAogIGZyb206ICcyMDE5JwotIG93bmVyOgogICAgbmFtZTogSW50ZXJnb3Zlcm5tZW50YWwgT2NlYW5vZ3JhcGhpYyBDb21taXNzaW9uCiAgICBhYmJyZXZpYXRpb246IElPQwogICAgdXJsOiBodHRwOi8vaW9jLXVuZXNjby5vcmcKICBmcm9tOiAnMjAxOScKbGluazoKLSB0eXBlOiBwZGYKICBjb250ZW50OiBodHRwczovL3d3dy5zdGFyLm5lc2Rpcy5ub2FhLmdvdi9zb2NkL2xzYS9HRUJDT19Db29rYm9vay9kb2N1bWVudHMvQ29va0Jvb2tfMjAxOTEwMzEucGRmCnBsYWNlOiBNb25hY28KdmFsaWRpdHk6CiAgYmVnaW5zOiAnMjAxOS0xMC0zMScKY29udHJpYnV0b3I6Ci0gb3JnYW5pemF0aW9uOgogICAgbmFtZTogSW50ZXJuYXRpb25hbCBIeWRyb2dyYXBoaWMgT3JnYW5pemF0aW9uCiAgICBhYmJyZXZpYXRpb246IElITwogICAgdXJsOiB3d3cuaWhvLmludAogIHJvbGU6IHB1Ymxpc2hlcgotIG9yZ2FuaXphdGlvbjoKICAgIG5hbWU6IEludGVyZ292ZXJubWVudGFsIE9jZWFub2dyYXBoaWMgQ29tbWlzc2lvbgogICAgYWJicmV2aWF0aW9uOiBJT0MKICAgIHVybDogaHR0cDovL2lvYy11bmVzY28ub3JnCiAgcm9sZTogcHVibGlzaGVyCnNlcmllczoKICBudW1iZXI6IEIKICB0eXBlOiBtYWluCiAgdGl0bGU6CiAgICB0eXBlOiBvcmlnaW5hbAogICAgY29udGVudDoKICAgIC0gY29udGVudDogQmF0aHltZXRyaWMgUHVibGljYXRpb25zCiAgICAgIGxhbmd1YWdlOiBlbgogICAgICBzY3JpcHQ6IExhdG4KICAgIC0gY29udGVudDogUHVibGljYXRpb25zIGJhdGh5bcOpdHJpcXVlcwogICAgICBsYW5ndWFnZTogZnIKICAgICAgc2NyaXB0OiBMYXRuCiAgcGxhY2U6IE1vbmFjbwogIG9yZ2FuaXphdGlvbjogSW50ZXJuYXRpb25hbCBIeWRyb2dyYXBoaWMgT3JnYW5pemF0aW9uCg==
-  recorded_at: Mon, 05 Dec 2022 03:59:37 GMT
+  recorded_at: Tue, 07 Mar 2023 23:05:52 GMT
 recorded_with: VCR 6.1.0

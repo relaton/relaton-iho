@@ -2,16 +2,25 @@ require "net/http"
 
 module RelatonIho
   class IhoBibliography
-    ENDPOINT = "https://raw.githubusercontent.com/relaton/relaton-data-iho/"\
-               "master/data/".freeze
+    ENDPOINT = "https://raw.githubusercontent.com/relaton/relaton-data-iho/" \
+               "master/".freeze
 
     class << self
-      # @param text [String]
-      # @return [RelatonIho::IhoBibliographicItem]
+      #
+      # Search for IHO standard by IHO standard Code
+      #
+      # @param text [String] the IHO standard Code to look up (e..g "IHO B-11")
+      #
+      # @return [RelatonIho::IhoBibliographicItem, nil] the IHO standard or nil if not found
+      #
       def search(text, _year = nil, _opts = {}) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
         warn "[relaton-iho] (\"#{text}\") fetching..."
-        ref = text.sub(/^IHO\s/, "").downcase.sub(/^([[:alpha:]]+)(\d+)/, '\1-\2')
-        uri = URI("#{ENDPOINT}#{ref}.yaml")
+        ref = text.sub(/^IHO\s/, "").sub(/^([[:alpha:]]+)(\d+)/, '\1-\2')
+        index = Relaton::Index.find_or_create :IHO, url: "#{ENDPOINT}index.zip"
+        row = index.search(ref).first
+        return unless row
+
+        uri = URI("#{ENDPOINT}#{row[:file]}")
         resp = Net::HTTP.get_response uri
         return unless resp.code == "200"
 
