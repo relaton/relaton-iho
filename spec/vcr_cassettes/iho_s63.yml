@@ -2,77 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://raw.githubusercontent.com/relaton/relaton-data-iho/master/data/s-63.yaml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - raw.githubusercontent.com
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '635'
-      Cache-Control:
-      - max-age=300
-      Content-Security-Policy:
-      - default-src 'none'; style-src 'unsafe-inline'; sandbox
-      Content-Type:
-      - text/plain; charset=utf-8
-      Etag:
-      - W/"032919a2ebc6755a56b43af1759cda6fb043cae5a262f10a1992c05f100f1a5d"
-      Strict-Transport-Security:
-      - max-age=31536000
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - deny
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Github-Request-Id:
-      - EC50:447C:2560FC:307418:6407B9AF
-      Accept-Ranges:
-      - bytes
-      Date:
-      - Tue, 07 Mar 2023 22:24:47 GMT
-      Via:
-      - 1.1 varnish
-      X-Served-By:
-      - cache-iad-kcgs7200143-IAD
-      X-Cache:
-      - MISS
-      X-Cache-Hits:
-      - '0'
-      X-Timer:
-      - S1678227887.296785,VS0,VE107
-      Vary:
-      - Authorization,Accept-Encoding,Origin
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Fastly-Request-Id:
-      - 2e357aaff6d0363ad2253109f10ef454bf600cdb
-      Expires:
-      - Tue, 07 Mar 2023 22:29:47 GMT
-      Source-Age:
-      - '0'
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        LS0tCnRpdGxlOgotIHR5cGU6IG1haW4KICBjb250ZW50OiBJSE8gRGF0YSBQcm90ZWN0aW9uIFNjaGVtZQogIGxhbmd1YWdlOiBlbgotIHR5cGU6IG1haW4KICBjb250ZW50OiBEaXNwb3NpdGlmIGRlIGwnT0hJIHBvdXIgbGEgcHJvdGVjdGlvbiBkZXMgZG9ubsOpZXMKICBsYW5ndWFnZTogZnIKZWRpdG9yaWFsZ3JvdXA6Ci0gLSBjb21taXR0ZWU6CiAgICAgIGFiYnJldmlhdGlvbjogSFNTQwogICAgICBuYW1lOiBIeWRyb2dyYXBoaWMgU2VydmljZXMgYW5kIFN0YW5kYXJkcyBDb21taXR0ZWUKICAgICAgd29ya2dyb3VwOgogICAgICAgIGFiYnJldmlhdGlvbjogRU5DV0cKICAgICAgICBuYW1lOiBFTkMgU1RBTkRBUkRTIE1BSU5URU5BTkNFIFdPUktJTkcgR1JPVVAKdHlwZTogc3RhbmRhcmQKZG9jaWQ6CiAgdHlwZTogSUhPCiAgaWQ6IFMtNjMKICBwcmltYXJ5OiB0cnVlCmRvY251bWJlcjogNjMKZWRpdGlvbjoKICBjb250ZW50OiAxLjIuMQpkb2NzdGF0dXM6CiAgc3RhZ2U6CiAgICB2YWx1ZTogaW4tZm9yY2UKbGFuZ3VhZ2U6Ci0gZW4KLSBmcgpzY3JpcHQ6IExhdG4KdmVyc2lvbjoKICByZXZpc2lvbl9kYXRlOiAnMjAyMC0wMy0wMScKZGF0ZToKICB0eXBlOiBwdWJsaXNoZWQKICBmcm9tOiAnMjAyMC0wMy0wMScKY29weXJpZ2h0OgotIG93bmVyOgogICAgbmFtZTogSW50ZXJuYXRpb25hbCBIeWRyb2dyYXBoaWMgT3JnYW5pemF0aW9uCiAgICBhYmJyZXZpYXRpb246IElITwogICAgdXJsOiB3d3cuaWhvLmludAogIGZyb206ICcyMDIwJwpsaW5rOgotIHR5cGU6IHBkZgogIGNvbnRlbnQ6IGh0dHBzOi8vaWhvLmludC91cGxvYWRzL3VzZXIvcHVicy9zdGFuZGFyZHMvcy02My9TLTYzXzIwMjBfRWQxLjIuMV9FTl9EcmFmdF9DbGVhbi5wZGYKcGxhY2U6IE1vbmFjbwp2YWxpZGl0eToKICBiZWdpbnM6ICcyMDIwLTAzLTAxJwpjb250cmlidXRvcjoKLSBvcmdhbml6YXRpb246CiAgICBuYW1lOiBJbnRlcm5hdGlvbmFsIEh5ZHJvZ3JhcGhpYyBPcmdhbml6YXRpb24KICAgIGFiYnJldmlhdGlvbjogSUhPCiAgICB1cmw6IHd3dy5paG8uaW50CiAgcm9sZTogcHVibGlzaGVyCnNlcmllczoKICBudW1iZXI6IFMKICB0eXBlOiBtYWluCiAgdGl0bGU6CiAgICB0eXBlOiBvcmlnaW5hbAogICAgY29udGVudDoKICAgIC0gY29udGVudDogU3RhbmRhcmRzIGFuZCBTcGVjaWZpY2F0aW9ucwogICAgICBsYW5ndWFnZTogZW4KICAgICAgc2NyaXB0OiBMYXRuCiAgICAtIGNvbnRlbnQ6IE5vcm1lcyBldCBTcMOpY2lmaWNhdGlvbnMKICAgICAgbGFuZ3VhZ2U6IGZyCiAgICAgIHNjcmlwdDogTGF0bgogIHBsYWNlOiBNb25hY28KICBvcmdhbml6YXRpb246IEludGVybmF0aW9uYWwgSHlkcm9ncmFwaGljIE9yZ2FuaXphdGlvbgo=
-  recorded_at: Tue, 07 Mar 2023 22:24:47 GMT
-- request:
-    method: get
     uri: https://raw.githubusercontent.com/relaton/relaton-data-iho/master/data/s-63_1-2-1.yaml
     body:
       encoding: US-ASCII
@@ -116,30 +45,30 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 08 Mar 2023 20:50:19 GMT
+      - Wed, 08 Mar 2023 21:06:21 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200131-IAD
+      - cache-iad-kjyo7100124-IAD
       X-Cache:
-      - MISS
+      - HIT
       X-Cache-Hits:
-      - '0'
+      - '1'
       X-Timer:
-      - S1678308619.087028,VS0,VE103
+      - S1678309582.821183,VS0,VE74
       Vary:
       - Authorization,Accept-Encoding,Origin
       Access-Control-Allow-Origin:
       - "*"
       X-Fastly-Request-Id:
-      - 2c67302dec78226a63887bcb4f86b3ed29dc5669
+      - 6beeb7935520f451c36719ccc13ed149d4af0c01
       Expires:
-      - Wed, 08 Mar 2023 20:55:19 GMT
+      - Wed, 08 Mar 2023 21:11:21 GMT
       Source-Age:
       - '0'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         LS0tCnRpdGxlOgotIHR5cGU6IG1haW4KICBjb250ZW50OiBJSE8gRGF0YSBQcm90ZWN0aW9uIFNjaGVtZQogIGxhbmd1YWdlOiBlbgotIHR5cGU6IG1haW4KICBjb250ZW50OiBEaXNwb3NpdGlmIGRlIGwnT0hJIHBvdXIgbGEgcHJvdGVjdGlvbiBkZXMgZG9ubsOpZXMKICBsYW5ndWFnZTogZnIKZWRpdG9yaWFsZ3JvdXA6Ci0gLSBjb21taXR0ZWU6CiAgICAgIGFiYnJldmlhdGlvbjogSFNTQwogICAgICBuYW1lOiBIeWRyb2dyYXBoaWMgU2VydmljZXMgYW5kIFN0YW5kYXJkcyBDb21taXR0ZWUKICAgICAgd29ya2dyb3VwOgogICAgICAgIGFiYnJldmlhdGlvbjogRU5DV0cKICAgICAgICBuYW1lOiBFTkMgU1RBTkRBUkRTIE1BSU5URU5BTkNFIFdPUktJTkcgR1JPVVAKdHlwZTogc3RhbmRhcmQKZG9jaWQ6CiAgdHlwZTogSUhPCiAgaWQ6IFMtNjMKICBwcmltYXJ5OiB0cnVlCmRvY251bWJlcjogNjMKZWRpdGlvbjoKICBjb250ZW50OiAxLjIuMQpkb2NzdGF0dXM6CiAgc3RhZ2U6CiAgICB2YWx1ZTogaW4tZm9yY2UKbGFuZ3VhZ2U6Ci0gZW4KLSBmcgpzY3JpcHQ6IExhdG4KdmVyc2lvbjoKICByZXZpc2lvbl9kYXRlOiAnMjAyMC0wMy0wMScKZGF0ZToKICB0eXBlOiBwdWJsaXNoZWQKICBmcm9tOiAnMjAyMC0wMy0wMScKY29weXJpZ2h0OgotIG93bmVyOgogICAgbmFtZTogSW50ZXJuYXRpb25hbCBIeWRyb2dyYXBoaWMgT3JnYW5pemF0aW9uCiAgICBhYmJyZXZpYXRpb246IElITwogICAgdXJsOiB3d3cuaWhvLmludAogIGZyb206ICcyMDIwJwpsaW5rOgotIHR5cGU6IHBkZgogIGNvbnRlbnQ6IGh0dHBzOi8vaWhvLmludC91cGxvYWRzL3VzZXIvcHVicy9zdGFuZGFyZHMvcy02My9TLTYzXzIwMjBfRWQxLjIuMV9FTl9EcmFmdF9DbGVhbi5wZGYKcGxhY2U6IE1vbmFjbwp2YWxpZGl0eToKICBiZWdpbnM6ICcyMDIwLTAzLTAxJwpjb250cmlidXRvcjoKLSBvcmdhbml6YXRpb246CiAgICBuYW1lOiBJbnRlcm5hdGlvbmFsIEh5ZHJvZ3JhcGhpYyBPcmdhbml6YXRpb24KICAgIGFiYnJldmlhdGlvbjogSUhPCiAgICB1cmw6IHd3dy5paG8uaW50CiAgcm9sZTogcHVibGlzaGVyCnNlcmllczoKICBudW1iZXI6IFMKICB0eXBlOiBtYWluCiAgdGl0bGU6CiAgICB0eXBlOiBvcmlnaW5hbAogICAgY29udGVudDoKICAgIC0gY29udGVudDogU3RhbmRhcmRzIGFuZCBTcGVjaWZpY2F0aW9ucwogICAgICBsYW5ndWFnZTogZW4KICAgICAgc2NyaXB0OiBMYXRuCiAgICAtIGNvbnRlbnQ6IE5vcm1lcyBldCBTcMOpY2lmaWNhdGlvbnMKICAgICAgbGFuZ3VhZ2U6IGZyCiAgICAgIHNjcmlwdDogTGF0bgogIHBsYWNlOiBNb25hY28KICBvcmdhbml6YXRpb246IEludGVybmF0aW9uYWwgSHlkcm9ncmFwaGljIE9yZ2FuaXphdGlvbgo=
-  recorded_at: Wed, 08 Mar 2023 20:50:19 GMT
+  recorded_at: Wed, 08 Mar 2023 21:06:21 GMT
 recorded_with: VCR 6.1.0

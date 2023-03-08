@@ -17,7 +17,7 @@ module RelatonIho
         warn "[relaton-iho] (\"#{text}\") fetching..."
         ref = text.sub(/^IHO\s/, "").sub(/^([[:alpha:]]+)(\d+)/, '\1-\2')
         index = Relaton::Index.find_or_create :IHO, url: "#{ENDPOINT}index.zip"
-        row = index.search(ref).first
+        row = index.search(ref).max_by { |r| r[:id] }
         return unless row
 
         uri = URI("#{ENDPOINT}#{row[:file]}")
