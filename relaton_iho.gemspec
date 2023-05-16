@@ -26,5 +26,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec", "~> 3.0"
 
   s.add_dependency "relaton-bib", "~> 1.14.0"
-  s.add_dependency "relaton-index", "~> 0.1.0"
+  s.add_dependency "relaton-index", "~> 0.2.0"
 end

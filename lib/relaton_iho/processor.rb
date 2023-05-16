@@ -36,5 +36,12 @@ module RelatonIho
     def grammar_hash
       @grammar_hash ||= ::RelatonIho.grammar_hash
     end
+
+    #
+    # Remove index file
+    #
+    def remove_index_file
+      Relaton::Index.find_or_create(:IHO, url: true).remove_file
+    end
   end
 end
