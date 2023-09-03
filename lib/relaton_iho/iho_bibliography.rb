@@ -16,7 +16,7 @@ module RelatonIho
       def search(text, _year = nil, _opts = {}) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
         warn "[relaton-iho] (\"#{text}\") fetching..."
         ref = text.sub(/^IHO\s/, "").sub(/^([[:alpha:]]+)(\d+)/, '\1-\2')
-        index = Relaton::Index.find_or_create :IHO, url: "#{ENDPOINT}index.zip"
+        index = Relaton::Index.find_or_create :iho, url: "#{ENDPOINT}index.zip"
         row = index.search(ref).max_by { |r| r[:id] }
         return unless row
 

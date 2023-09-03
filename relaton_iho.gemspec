@@ -19,12 +19,8 @@ Gem::Specification.new do |s|
   end
   s.platform      = Gem::Platform::RUBY
   s.require_paths = ["lib"]
-  s.required_ruby_version = Gem::Requirement.new(">= 2.6.0")
+  s.required_ruby_version = Gem::Requirement.new(">= 2.7.0")
 
-  s.add_development_dependency "equivalent-xml", "~> 0.6"
-  s.add_development_dependency "rake", "~> 13.0"
-  s.add_development_dependency "rspec", "~> 3.0"
-
-  s.add_dependency "relaton-bib", "~> 1.14.0"
+  s.add_dependency "relaton-bib", "~> 1.16.0"
   s.add_dependency "relaton-index", "~> 0.2.0"
 end

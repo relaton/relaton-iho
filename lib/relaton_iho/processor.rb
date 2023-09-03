@@ -41,7 +41,7 @@ module RelatonIho
     # Remove index file
     #
     def remove_index_file
-      Relaton::Index.find_or_create(:IHO, url: true).remove_file
+      Relaton::Index.find_or_create(:iho, url: true).remove_file
     end
   end
 end
