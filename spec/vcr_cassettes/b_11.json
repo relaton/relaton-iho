@@ -30,7 +30,7 @@
             "keep-alive"
           ],
           "Content-Length": [
-            "727"
+            "724"
           ],
           "Cache-Control": [
             "max-age=300"
@@ -42,7 +42,7 @@
             "application/zip"
           ],
           "Etag": [
-            "W/\"745b0a83ac161429bc0cbc23a0a75a5c669f0bb84cd315f99a1766240df9ea9e\""
+            "W/\"9fd3f927574b43bc8cef2dd45bce8e72e7d2f243ab31800c3d3f28593ac1e753\""
           ],
           "Strict-Transport-Security": [
             "max-age=31536000"
@@ -57,19 +57,19 @@
             "1; mode=block"
           ],
           "X-Github-Request-Id": [
-            "517E:631E:136F46:175194:64F2904A"
+            "3126:062B:485510:5650F9:6509FDF9"
           ],
           "Accept-Ranges": [
             "bytes"
           ],
           "Date": [
-            "Sat, 02 Sep 2023 01:30:51 GMT"
+            "Tue, 19 Sep 2023 20:01:01 GMT"
           ],
           "Via": [
             "1.1 varnish"
           ],
           "X-Served-By": [
-            "cache-iad-kcgs7200042-IAD"
+            "cache-pdk-kpdk1780038-PDK"
           ],
           "X-Cache": [
             "MISS"
@@ -78,7 +78,7 @@
             "0"
           ],
           "X-Timer": [
-            "S1693618251.420464,VS0,VE88"
+            "S1695153661.230675,VS0,VE81"
           ],
           "Vary": [
             "Authorization,Accept-Encoding,Origin"
@@ -90,10 +90,10 @@
             "cross-origin"
           ],
           "X-Fastly-Request-Id": [
-            "da0b4e0cfb7c4aaedb338e4ba2220dba40fc80d3"
+            "235593a80c46c7986a46ae0afe7cb7fd1d38fd1a"
           ],
           "Expires": [
-            "Sat, 02 Sep 2023 01:35:51 GMT"
+            "Tue, 19 Sep 2023 20:06:01 GMT"
           ],
           "Source-Age": [
             "0"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u0000\u0013r!W.\u000bê†-\u0002\u0000\u0000Ú\n\u0000\u0000\n\u0000\u001c\u0000index.yamlUT\t\u0000\u0003EòñdEòñdux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004ç\u0003\u0000\u0000uVËn\u001b1\f¼ç+ô\u0003Ü¬¨·oNÎ\u0006\u0002ä\u0003\u0016ë$\u0005\u0002dƒ\u0000í¡ýûRr{\b9ºzGäp8$MDwäNï¯'÷Lïœ;ýxÿx;¹×ý×~ÿS~ZþìÇÇÌ…Ø…e]Š\u0002\u001eÄ[ •Ê7ô3ùu\u001døÕ\u0004–/ãÅª^¤³óòÀ2Iûæ\u0005Ï\n\u001f]\\*ˆ\u001f·HÕDÍ1¤\u0013ÛÆ†Í…\ndPÁÜƒe\u001d¾a\u001e)\u0016W@È\u0017ù°\u0015\u0013ó‘|Œ_ä\u0003`,Š{?\u0004\u0004Š{?\u00144/¸Í^p\u0003/\u001eHwÿªúþD^!¾Èk­ØåÅ/\u001a(Šñ–É+¼D¼g\u0010”Ø+nÕp«*s}˜”[¯PŸ\u0018]Âž‰[\u0002êdq$\u001bø•²8’\rÚóè¯vÎU>Œþ\u00060Q˜NŸ(Ë§÷\u00174VaòlL3žRÏS—1vYNR§G\u0019’Ôém\u0006©s’AêD\u0019R\u001fV”!õiÕ\u0019ž(\u0019;%={\u0001RÙ\u000b¸Æ™(y2yR#^G½F4Ý9??ß~ŸgyÒÞ?ï˜]\u001c=¶nÈqô˜µ3­…½ŽÉaâ\u001b\u000eÐ7\u0019dg­zž©ž§*Æ©Š\u0011¾˜ºwíÈ2õ{\u0001/úå¨“ËQÁÎhFê¦Üš[³©Š§nbì¦®4œÉ®´˜›\u0006–ÉM¬ýcí£ò·2Éß\nÈ/ø6Ã7€¿‡+ç \u000f7NàI‹\u0003Ã\u000e\u0007¨öA\u0001h=î—öþ¸_zêbçÜÀùˆt³[¯Ž;\n¶^\u001dwÔÜ\u001bl}iÎdo÷\u001dÈàNç¾\u0003ÙôTâã-,ñí\u0016î“…—lŸ,¼eÓí~ƒ\u000e·ûýÑ_PK\u0001\u0002\u001e\u0003\u0014\u0000\u0000\u0000\b\u0000\u0013r!W.\u000bê†-\u0002\u0000\u0000Ú\n\u0000\u0000\n\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000¤\u0000\u0000\u0000\u0000index.yamlUT\u0005\u0000\u0003Eòñdux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004ç\u0003\u0000\u0000PK\u0005\u0006\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000P\u0000\u0000\u0000q\u0002\u0000\u0000\u0000\u0000"
+          "string": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u0000,r3WBÞè\u0007*\u0002\u0000\u0000Î\n\u0000\u0000\n\u0000\u001c\u0000index.yamlUT\t\u0000\u0003s­\tes­\teux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004\u0000\u0000\u0000uVËn\u001b1\f¼ç+ô\u0003tVÔÛ7»g\u0003\u0006ú\u0001‹u“\u0002\u0001²öÐþ})ùP˜\u001c—âc83\\\"z!wüx;ºïÄÁ…ÃrX^œ;þüø|?º·í÷öúK>¬\u0016Z\u000e·ýó¼_¼óð|Y=|±LJÈ—IÅÅé‹\b^ä8J°yã¨Àº\u0002·Ù\u0014Üà\u0014Áæ\u000eÏY¯”TÈÒSÄ7ò\u0019–ý!\u001f`ÕØ\u001cÃ6c[\u0019Ä×ód¬º©Nbq\u0005v\u0012ËZLæ3U\u0015x£ªj§êòÁƒÚ©®™¼Ê(X\u00148›`QÀlgÙ½iÁ[æð\u00040ù\u0002\u0011ó\"€\u0019\u0013\u0002ÞIt\tï$®ÉÄ_¨¸\nÂw*k…ýLõÅÞdFºê™‘ª\u0002O\u0012\u0007†s¦Óˆ·¼OÛˆgµŸ(Èûfòß(\nð¾IÁˆº‡\u0007Ÿ½íá6zð*¾uY#\u000e¶®jÍAñ\u0019Ø\u0019{YN}H\u0014Ÿú\u0016C\u001eš\u0000ýóÐ„î?Ï¬2#§\u0014M<è\u001e¬2\u001el\u000f:Þ\u0006*\u000fËÆÃ²Î1“T\u0013ÿ÷2\u0013ÂLâ\u0003ÚI\u0017$\u0003Ìr×#[ÌÒéëëýÏi¶É´õÏ\u001bæ¸FN6£1+fÐ¢;\u0000wÇ\\\u001c¹i3gZ€3]ˆ\u0007\u0015tõx0¡h7Å6&nŠ],ç‰Rr\u0006J9S–‹Ì`éYî1«è+ùWÖ˜Ü%)kÏh&_³™4\u0013F&Í‚(ýUdÊÒ_5ý•\u0001–åz\u0019XeÍ’2ap*Á}×øDô]Û\u001bq5º¼“öz\u000fg'\u000f}§•™\u000f\u0016èƒ½ãÙ_Ý‚UÍez§\nxq¡\u0000ù¿SÀwyb3Ý6ž|æ\u001fPK\u0001\u0002\u001e\u0003\u0014\u0000\u0000\u0000\b\u0000,r3WBÞè\u0007*\u0002\u0000\u0000Î\n\u0000\u0000\n\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000¤\u0000\u0000\u0000\u0000index.yamlUT\u0005\u0000\u0003s­\teux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004\u0000\u0000\u0000PK\u0005\u0006\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000P\u0000\u0000\u0000n\u0002\u0000\u0000\u0000\u0000"
         }
       },
-      "recorded_at": "Sat, 02 Sep 2023 01:30:51 GMT"
+      "recorded_at": "Tue, 19 Sep 2023 20:01:01 GMT"
     },
     {
       "request": {
@@ -166,19 +166,19 @@
             "1; mode=block"
           ],
           "X-Github-Request-Id": [
-            "6D84:4EFC:13E6CE:17ED14:64F29049"
+            "1216:173A:4813F6:560DD5:6509FDFC"
           ],
           "Accept-Ranges": [
             "bytes"
           ],
           "Date": [
-            "Sat, 02 Sep 2023 01:30:51 GMT"
+            "Tue, 19 Sep 2023 20:01:01 GMT"
           ],
           "Via": [
             "1.1 varnish"
           ],
           "X-Served-By": [
-            "cache-iad-kjyo7100029-IAD"
+            "cache-pdk-kpdk1780123-PDK"
           ],
           "X-Cache": [
             "MISS"
@@ -187,7 +187,7 @@
             "0"
           ],
           "X-Timer": [
-            "S1693618252.647610,VS0,VE75"
+            "S1695153661.404431,VS0,VE92"
           ],
           "Vary": [
             "Authorization,Accept-Encoding,Origin"
@@ -199,10 +199,10 @@
             "cross-origin"
           ],
           "X-Fastly-Request-Id": [
-            "c2ba150c69b133b207d3f684c4c7ac9564c34ac8"
+            "8996cbef0acd99116d8a73fdf501f3d75bcfc392"
           ],
           "Expires": [
-            "Sat, 02 Sep 2023 01:35:51 GMT"
+            "Tue, 19 Sep 2023 20:06:01 GMT"
           ],
           "Source-Age": [
             "0"
@@ -213,7 +213,7 @@
           "string": "---\ntitle:\n- type: main\n  content: IHO-IOC GEBCO Cook Book\n  language: en\n- type: main\n  content: Livre de recettes GEBCO OHI-COI\n  language: fr\neditorialgroup:\n- - committee:\n      abbreviation: HSSC\n      name: Hydrographic Services and Standards Committee\n  - committee:\n      abbreviation: IRCC\n      name: Inter-Regional Coordination Committee\n      committee:\n        abbreviation: GEBCO\n        name: JOINT IHO-IOC GUIDING COMMITTEE FOR THE GENERAL BATHYMETRIC CHART OF\n          THE OCEANS\ntype: standard\ndocid:\n  type: IHO\n  id: B-11\n  primary: true\ndocnumber: 11\nedition:\n  content: 1.0.0\ndocstatus:\n  stage:\n    value: in-force\nlanguage:\n- en\n- fr\nscript: Latn\nversion:\n  revision_date: '2019-10-31'\ndate:\n  type: published\n  from: '2020-01-20'\ncopyright:\n- owner:\n    name: International Hydrographic Organization\n    abbreviation: IHO\n    url: www.iho.int\n  from: '2019'\n- owner:\n    name: Intergovernmental Oceanographic Commission\n    abbreviation: IOC\n    url: http://ioc-unesco.org\n  from: '2019'\nlink:\n- type: pdf\n  content: https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf\nplace: Monaco\nvalidity:\n  begins: '2019-10-31'\ncontributor:\n- organization:\n    name: International Hydrographic Organization\n    abbreviation: IHO\n    url: www.iho.int\n  role: publisher\n- organization:\n    name: Intergovernmental Oceanographic Commission\n    abbreviation: IOC\n    url: http://ioc-unesco.org\n  role: publisher\nseries:\n  number: B\n  type: main\n  title:\n    type: original\n    content:\n    - content: Bathymetric Publications\n      language: en\n      script: Latn\n    - content: Publications bathymÃ©triques\n      language: fr\n      script: Latn\n  place: Monaco\n  organization: International Hydrographic Organization\n"
         }
       },
-      "recorded_at": "Sat, 02 Sep 2023 01:30:51 GMT"
+      "recorded_at": "Tue, 19 Sep 2023 20:01:01 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"

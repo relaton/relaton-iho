@@ -60,19 +60,19 @@
             "1; mode=block"
           ],
           "X-Github-Request-Id": [
-            "F7B2:1A37:102F6C:140E8C:64F2904B"
+            "628E:7718:494201:573E2F:6509FDFD"
           ],
           "Accept-Ranges": [
             "bytes"
           ],
           "Date": [
-            "Sat, 02 Sep 2023 01:30:52 GMT"
+            "Tue, 19 Sep 2023 20:01:02 GMT"
           ],
           "Via": [
             "1.1 varnish"
           ],
           "X-Served-By": [
-            "cache-iad-kcgs7200064-IAD"
+            "cache-pdk-kpdk1780133-PDK"
           ],
           "X-Cache": [
             "MISS"
@@ -81,7 +81,7 @@
             "0"
           ],
           "X-Timer": [
-            "S1693618252.188431,VS0,VE70"
+            "S1695153662.396090,VS0,VE121"
           ],
           "Vary": [
             "Authorization,Accept-Encoding,Origin"
@@ -93,10 +93,10 @@
             "cross-origin"
           ],
           "X-Fastly-Request-Id": [
-            "efbaca704eb4e69d902a8982504c9b4d02b557a1"
+            "223434a6f457302da52bc58a033f158b5722ea7b"
           ],
           "Expires": [
-            "Sat, 02 Sep 2023 01:35:52 GMT"
+            "Tue, 19 Sep 2023 20:06:02 GMT"
           ],
           "Source-Age": [
             "0"
@@ -107,7 +107,7 @@
           "string": "---\ntitle:\n- type: main\n  content: IHO Data Protection Scheme\n  language: en\n- type: main\n  content: Dispositif de l'OHI pour la protection des données\n  language: fr\neditorialgroup:\n- - committee:\n      abbreviation: HSSC\n      name: Hydrographic Services and Standards Committee\n      workgroup:\n        abbreviation: ENCWG\n        name: ENC STANDARDS MAINTENANCE WORKING GROUP\ntype: standard\ndocid:\n  type: IHO\n  id: S-63\n  primary: true\ndocnumber: 63\nedition:\n  content: 1.2.1\ndocstatus:\n  stage:\n    value: in-force\nlanguage:\n- en\n- fr\nscript: Latn\nversion:\n  revision_date: '2020-03-01'\ndate:\n  type: published\n  from: '2020-03-01'\ncopyright:\n- owner:\n    name: International Hydrographic Organization\n    abbreviation: IHO\n    url: www.iho.int\n  from: '2020'\nlink:\n- type: pdf\n  content: https://iho.int/uploads/user/pubs/standards/s-63/S-63_2020_Ed1.2.1_EN_Draft_Clean.pdf\nplace: Monaco\nvalidity:\n  begins: '2020-03-01'\ncontributor:\n- organization:\n    name: International Hydrographic Organization\n    abbreviation: IHO\n    url: www.iho.int\n  role: publisher\nseries:\n  number: S\n  type: main\n  title:\n    type: original\n    content:\n    - content: Standards and Specifications\n      language: en\n      script: Latn\n    - content: Normes et Spécifications\n      language: fr\n      script: Latn\n  place: Monaco\n  organization: International Hydrographic Organization\n"
         }
       },
-      "recorded_at": "Sat, 02 Sep 2023 01:30:52 GMT"
+      "recorded_at": "Tue, 19 Sep 2023 20:01:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"
