@@ -14,21 +14,26 @@ module RelatonIho
       # @return [RelatonIho::IhoBibliographicItem, nil] the IHO standard or nil if not found
       #
       def search(text, _year = nil, _opts = {}) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
-        warn "[relaton-iho] (\"#{text}\") fetching..."
+        Util.warn "(#{text}) fetching..."
         ref = text.sub(/^IHO\s/, "").sub(/^([[:alpha:]]+)(\d+)/, '\1-\2')
         index = Relaton::Index.find_or_create :iho, url: "#{ENDPOINT}index.zip"
         row = index.search(ref).max_by { |r| r[:id] }
-        return unless row
+        unless row
+          Util.warn "(#{text}) not found"
+          return
+        end
 
         uri = URI("#{ENDPOINT}#{row[:file]}")
         resp = Net::HTTP.get_response uri
-        return unless resp.code == "200"
+        unless resp.code == "200"
+          raise RelatonBib::RequestError, "Could not access #{uri}: HTTP #{resp.code}"
+        end
 
         yaml = RelatonBib.parse_yaml resp.body, [Date]
         hash = HashConverter.hash_to_bib yaml
         hash[:fetched] = Date.today.to_s
         item = IhoBibliographicItem.new(**hash)
-        warn "[relaton-iho] (\"#{text}\") found #{item.docidentifier.first.id}"
+        Util.warn "(#{text}) found `#{item.docidentifier.first.id}`"
         item
       rescue SocketError, Errno::EINVAL, Errno::ECONNRESET, EOFError,
              Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError,

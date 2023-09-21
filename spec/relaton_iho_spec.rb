@@ -1,4 +1,6 @@
 RSpec.describe RelatonIho do
+  before { RelatonIho.instance_variable_set :@configuration, nil }
+
   it "has a version number" do
     expect(RelatonIho::VERSION).not_to be nil
   end
@@ -42,6 +44,12 @@ RSpec.describe RelatonIho do
       result = RelatonIho::IhoBibliography.get "IHO B-6 4.2.0"
       expect(result.docidentifier.first.id).to eq "B-6"
       expect(result.edition.content).to eq "4.2.0"
+    end
+
+    it "not found", vcr: { cassette_name: "not_found" } do
+      expect do
+        expect(RelatonIho::IhoBibliography.get("IHO B-1111")).to be_nil
+      end.to output(/\[relaton-iho\] \(IHO B-1111\) not found/).to_stderr
     end
   end
 
