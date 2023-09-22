@@ -37,26 +37,37 @@ $ gem install relaton-iho
 
 == Usage
 
-=== Search for a standard using keywords
+=== Configuration
 
-Reference can be specified with or without an edition. References without an edition will return the latest edition of the standard. References with an edition will return the standard with the specified edition.
+Configuration is optional. The available option is `logger` which is a `Logger` instance. By default, the logger is `Logger.new($stderr)` with `Logger::WARN` level. To change the logger level, use `RelatonIho.configure` block.
 
 [source,ruby]
 ----
 require 'relaton_iho'
 => true
 
+RelatonIho.configure do |config|
+  config.logger.level = Logger::DEBUG
+end
+----
+
+=== Search for a standard using keywords
+
+Reference can be specified with or without an edition. References without an edition will return the latest edition of the standard. References with an edition will return the standard with the specified edition.
+
+[source,ruby]
+----
 # Search for a standard using a reference without an edition
 item = RelatonIho::IhoBibliography.search("IHO B-11")
-[relaton-iho] ("IHO B-11") fetching...
-[relaton-iho] ("IHO B-11") found B-11
+[relaton-iho] (IHO B-11) fetching...
+[relaton-iho] (IHO B-11) found `B-11`
 => #<RelatonIho::IhoBibliographicItem:0x007fe74fc80800
 ...
 
 # Search for a standard using a reference with an edition
 item = RelatonIho::IhoBibliography.search("IHO B-11 1.0.0")
-[relaton-iho] ("IHO B-11 1.0.0") fetching...
-[relaton-iho] ("IHO B-11 1.0.0") found B-11
+[relaton-iho] (IHO B-11 1.0.0) fetching...
+[relaton-iho] (IHO B-11 1.0.0) found `B-11`
 => #<RelatonIho::IhoBibliographicItem:0x00007fe79d0ed698
 ...
 ----
@@ -95,8 +106,8 @@ item.to_xml bibdata: true
 [source,ruby]
 ----
 RelatonIho::IhoBibliography.get "IHO B-11"
-[relaton-iho] ("IHO B-11") fetching...
-[relaton-iho] ("IHO B-11") found B-11
+[relaton-iho] (IHO B-11) fetching...
+[relaton-iho] (IHO B-11) found `B-11`
 => #<RelatonIho::IhoBibliographicItem:0x007fe78dbb7c78
 ...
 ----
