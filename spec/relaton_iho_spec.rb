@@ -19,8 +19,8 @@ RSpec.describe RelatonIho do
   end
 
   context "get document" do
-    it "by code" do
-      VCR.use_cassette "b_11" do
+    it "by code", vcr: "b_11" do
+      expect do
         file = "spec/fixtures/b_11.xml"
         result = RelatonIho::IhoBibliography.get "IHO B-11"
         xml = result.to_xml bibdata: true
@@ -30,7 +30,7 @@ RSpec.describe RelatonIho do
         schema = Jing.new "grammars/relaton-iho-compile.rng"
         errors = schema.validate file
         expect(errors).to eq []
-      end
+      end.to output(/\[relaton-iho\] \(IHO B-11\) Fetching from Relaton repository \.\.\./).to_stderr
     end
 
     it "by slightly misspelled reference" do
@@ -49,7 +49,7 @@ RSpec.describe RelatonIho do
     it "not found", vcr: { cassette_name: "not_found" } do
       expect do
         expect(RelatonIho::IhoBibliography.get("IHO B-1111")).to be_nil
-      end.to output(/\[relaton-iho\] \(IHO B-1111\) not found/).to_stderr
+      end.to output(/\[relaton-iho\] \(IHO B-1111\) Not found\./).to_stderr
     end
   end
 

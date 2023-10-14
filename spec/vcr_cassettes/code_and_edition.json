@@ -60,19 +60,19 @@
             "1; mode=block"
           ],
           "X-Github-Request-Id": [
-            "D7CE:3899:429461:508D88:6509FDFD"
+            "F060:3EF1:6EB6A3:8869AA:652A0DF6"
           ],
           "Accept-Ranges": [
             "bytes"
           ],
           "Date": [
-            "Tue, 19 Sep 2023 20:01:02 GMT"
+            "Sat, 14 Oct 2023 03:41:43 GMT"
           ],
           "Via": [
             "1.1 varnish"
           ],
           "X-Served-By": [
-            "cache-pdk-kpdk1780045-PDK"
+            "cache-atl18422-ATL"
           ],
           "X-Cache": [
             "MISS"
@@ -81,7 +81,7 @@
             "0"
           ],
           "X-Timer": [
-            "S1695153663.758972,VS0,VE99"
+            "S1697254903.373603,VS0,VE93"
           ],
           "Vary": [
             "Authorization,Accept-Encoding,Origin"
@@ -93,10 +93,10 @@
             "cross-origin"
           ],
           "X-Fastly-Request-Id": [
-            "2a11233d79151ac36bffd2856fb4e14fa143f77e"
+            "661b3d7920ac45b40af6e4c0a84d212bee083e47"
           ],
           "Expires": [
-            "Tue, 19 Sep 2023 20:06:02 GMT"
+            "Sat, 14 Oct 2023 03:46:43 GMT"
           ],
           "Source-Age": [
             "0"
@@ -107,7 +107,7 @@
           "string": "---\ntitle:\n- type: main\n  content: Standardization of Undersea Feature Names\n  language: en\n- type: main\n  content: Normalisation des Noms des Formes du Relief SousMarin\n  language: fr\n- type: main\n  content: NORMALIZACIÓN DE LAS FORMAS DEL RELIEVE SUBMARINO\n  language: es\neditorialgroup:\n- - committee:\n      abbreviation: HSSC\n      name: Hydrographic Services and Standards Committee\n  - committee:\n      abbreviation: IRCC\n      name: Inter-Regional Coordination Committee\n      committee:\n        abbreviation: GEBCO\n        name: JOINT IHO-IOC GUIDING COMMITTEE FOR THE GENERAL BATHYMETRIC CHART OF\n          THE OCEANS\ntype: standard\ndocid:\n  type: IHO\n  id: B-6\n  primary: tru\ndocnumber: 6\nedition:\n  content: 4.2.0\ndocstatus:\n  stage:\n    value: in-force\nlanguage:\n- en\n- fr\n- es\nscript: Latn\nversion:\n  revision_date: '2019-10-01'\ndate:\n  type: published\n  from: '2019-10-01'\ncopyright:\n- owner:\n    name: International Hydrographic Organization\n    abbreviation: IHO\n    url: www.iho.int\n  from: '2019'\n- owner:\n    name: Intergovernmental Oceanographic Commission\n    abbreviation: IOC\n    url: http://ioc-unesco.org\n  from: '2019'\nlink:\n- type: pdf\n  content: https://iho.int/uploads/user/pubs/bathy/B-6_e4%202%200_2019_EF_clean_3Oct2019.pdf\nplace: Monaco\nvalidity:\n  begins: '2019-10-01'\ncontributor:\n- organization:\n    name: International Hydrographic Organization\n    abbreviation: IHO\n    url: www.iho.int\n  role: publisher\n- organization:\n    name: Intergovernmental Oceanographic Commission\n    abbreviation: IOC\n    url: http://ioc-unesco.org\n  role: publisher\nseries:\n  number: B\n  type: main\n  title:\n    type: original\n    content:\n    - content: Bathymetric Publications\n      language: en\n      script: Latn\n    - content: Publications bathymétriques\n      language: fr\n      script: Latn\n  place: Monaco\n  organization: International Hydrographic Organization\n"
         }
       },
-      "recorded_at": "Tue, 19 Sep 2023 20:01:02 GMT"
+      "recorded_at": "Sat, 14 Oct 2023 03:41:43 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"
