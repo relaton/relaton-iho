@@ -1,8 +1,5 @@
 module RelatonIho
   class IhoBibliographicItem < RelatonBib::BibliographicItem
-    TYPES = %w[policy-and-procedures best-practices supporting-document
-               report legal directives proposal standard].freeze
-
     # @return [RelatonIho::CommentPeriod, NilClass]
     attr_reader :commentperiod
 
@@ -39,7 +36,7 @@ module RelatonIho
         if opts[:bibdata] && (doctype || editorialgroup&.presence? ||
                               ics.any? || commentperiod)
           ext = b.ext do
-            b.doctype doctype if doctype
+            doctype&.to_xml b
             editorialgroup&.to_xml b
             ics.each { |i| i.to_xml b }
             commentperiod&.to_xml b

@@ -6,7 +6,7 @@ RSpec.describe RelatonIho::CommentPeriond do
       ),
     )
     expect(item.to_xml(bibdata: true)).to be_equivalent_to <<~XML
-      <bibdata schema-version="v1.2.4">
+      <bibdata schema-version="v1.2.5">
         <ext schema-version="v1.0.0">
           <commentperiod>
             <from>2015-03-11</from>

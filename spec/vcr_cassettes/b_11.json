@@ -30,7 +30,7 @@
             "keep-alive"
           ],
           "Content-Length": [
-            "722"
+            "738"
           ],
           "Cache-Control": [
             "max-age=300"
@@ -42,7 +42,7 @@
             "application/zip"
           ],
           "Etag": [
-            "W/\"d57b6c1a23666203f96fba99c3cda9ba39188bddf28cccf84de5a66e02b3fbb8\""
+            "W/\"cab73e44f16c4ce98b4421305ff3987952273d9c61e7d9a1203b870e5be204cf\""
           ],
           "Strict-Transport-Security": [
             "max-age=31536000"
@@ -57,19 +57,19 @@
             "1; mode=block"
           ],
           "X-Github-Request-Id": [
-            "EA50:53BD:677D93:8133EF:652A0DF5"
+            "144C:7931:29965D:3141DA:655F8BFA"
           ],
           "Accept-Ranges": [
             "bytes"
           ],
           "Date": [
-            "Sat, 14 Oct 2023 03:41:42 GMT"
+            "Thu, 23 Nov 2023 17:29:33 GMT"
           ],
           "Via": [
             "1.1 varnish"
           ],
           "X-Served-By": [
-            "cache-atl18478-ATL"
+            "cache-pdk-kpdk1780106-PDK"
           ],
           "X-Cache": [
             "MISS"
@@ -78,7 +78,7 @@
             "0"
           ],
           "X-Timer": [
-            "S1697254902.093818,VS0,VE90"
+            "S1700760573.937787,VS0,VE84"
           ],
           "Vary": [
             "Authorization,Accept-Encoding,Origin"
@@ -90,10 +90,10 @@
             "cross-origin"
           ],
           "X-Fastly-Request-Id": [
-            "a4bd068fda6568cc5077e515c488f20f52efd85a"
+            "5ecce9ed82e2bb3786fa25ff995a5505498963c6"
           ],
           "Expires": [
-            "Sat, 14 Oct 2023 03:46:42 GMT"
+            "Thu, 23 Nov 2023 17:34:33 GMT"
           ],
           "Source-Age": [
             "0"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u0000*rMWŞœNÍ(\u0002\u0000\u0000Î\n\u0000\u0000\n\u0000\u001c\u0000index.yamlUT\t\u0000\u0003pQ)epQ)eux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004\u0000\u0000\u0000uVKn[1\fÜç\u0014º\u0000\u001d‰ú=ygwm @\u000eğğÜ¤@€8\bĞ.ÚÛ—zŞ$äp­!5\"‡C\u0011Ñ\u0003…ãÛË1<SË!\u001dø\u001eB8şz{=†—íÏöø[\u000eÖDLéğo»½Á× èC´øº\nšâ7ü\u0013U\u0005ü¤ª2r\u000eù\u0010AFÎk¦¨2>SŠI(£\u00009\u0011Î:âLeR\u001e&àJeR\u001eö\u0006îŞ\rÜÁ\r3ÂåÄº‚™\u001dhfÈ¾…\"\r²äÛZ¤?ßÑ\u0017ê°˜7ê°–uÂQ7ëÄënş Ô¥”6ıO9R‚º$'J ÿ…xgß\r{ŞÙw£„\béL%DÌ'²\u001bÁ0¢\f' \f€\"=HŸj‚¤†\u0019ö_j˜¡¶Ztæ£EØÓVv<[|Ùñ¬_XBÅ/,k\u0005z\u001cF‰\u0003ôÅ›Ğ\bß¸œ€eÓ¯ó\u0006­¡Ù\u0017…/¡a…/k3\n<OÅ¢ü×©X<ù`ä5‡ûë¬ÇÖëS;DÍ\u0016™5OÀPs\u001bCîEo\u001fCîµo_LÊÅx\u0017p-3ó®\u0017:5lÍáÙ\u001aà)x mÃ‚‡ëÈ\u0003°É}dW†—˜\u0015î¾\u001bšŞ7C\u0003³€ÇkÎ‚¯'²™›ê“öÇ«qÆÊ»êâxW½ö¤ÒC‡TúÚ¡ê±‰Íêb\u0017«§=Àv®n;^÷otO»\u001dhbî½ÅÙ{\u000bÜ\u0003Q¶ª×•‚ö€à\u0017d’‚^ìlÇ7O{`qú;\\(ÁÏ×\u0012ø{‰GÜ—v\u0013qŠû®3bæ÷wúøxı{ò<¸nóx\u0003o¼P†‹ôFÙÙÔŞÚ›\u001dú²÷ş\u0003PK\u0001\u0002\u001e\u0003\u0014\u0000\u0000\u0000\b\u0000*rMWŞœNÍ(\u0002\u0000\u0000Î\n\u0000\u0000\n\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000¤\u0000\u0000\u0000\u0000index.yamlUT\u0005\u0000\u0003pQ)eux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004\u0000\u0000\u0000PK\u0005\u0006\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000P\u0000\u0000\u0000l\u0002\u0000\u0000\u0000\u0000"
+          "string": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u00001rwWKá#=8\u0002\u0000\u0000Î\n\u0000\u0000\n\u0000\u001c\u0000index.yamlUT\t\u0000\u0003ş^_eş^_eux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004\u0000\u0000\u0000uVËn\u001b1\f¼ç+ô\u0003ÜHÔkå›³\u0000ù€Å:I\u0000q` =´_J.P„\u001c]WCi83$–ˆ\u001eÈ\u001d>Ş\u000eî…\"?8wøññù~poû¯ıñ§|Zşì×Ïÿ˜`1á;æ™ª\u000b‹_Š\u0002Ş¨n<\u0015uc®..R`îÍu‹$\u0015ßğ'j\nx¡¦Ş·/\u0017…È\u0006‘\u0015«äÒ²\u0002RiK´\u001aNEĞlĞ\u0017*‚f…~¢T]\u00154üU\u000e¶*\ny­Ğq\bj•ÏûP”\u0015›ÀNÈ,ÑĞ\t¼\t\u001bŠÆÓ0\u001e°İÊ‰Â\u0016/n!hñâ–æşLá‘5ï›˜Ê&WŞ‹†ƒ÷¢¢¾Yº´r\u0007£Üê\nÎÖº\u0015­Õ\\¹Ú~\u0002êGë\u0014y\"iäá™fZÒĞÕz\\ÒĞ\u0015é•§zeóÂY¦r\u0005ø«LåŠødÉ\u0010R®dÉVîÎ\u0007\u0007£ó±É¸Wğ´‚A\u0007\u0011â¯\u0014\u0001ú…Z_C¨ƒÖ÷í óÈŠvW²Â#+ÚáÀm:5\rx,‰µÕw†É.\f\u0001ìBq\täÅnì:åY\u0001Ï'\n\u0011\u0016¼Ê\u0001Ìnwrò‚8i+ÎÄ#+Õ8É#)Õ¨2İO¢\u000bœ¦|üúzÿ}œ”•¼÷ã\u001dÖ®§IÕº›¾yš`†™Li2´)™•>Ê$Ã¥€\fŸ)À¡½R\u00003+>—™Ï\u0005*“ïÊ€\t¹\f|ĞyÇ¶]\bºv\"‡‹IB™\u0005¡ \u001b¥Ã\n\r’\u000e+ô'øiÒ<z¡oU´õúVE;¯µÙNjp'qœ,UğşÔ&L\r÷ËxÔûn@³şlvØÍ¸z\u0006\u001bp=õ\u00106›ñNAªJgÀfGfı_#ùû÷Gó\u0017PK\u0001\u0002\u001e\u0003\u0014\u0000\u0000\u0000\b\u00001rwWKá#=8\u0002\u0000\u0000Î\n\u0000\u0000\n\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000¤\u0000\u0000\u0000\u0000index.yamlUT\u0005\u0000\u0003ş^_eux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004\u0000\u0000\u0000PK\u0005\u0006\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000P\u0000\u0000\u0000|\u0002\u0000\u0000\u0000\u0000"
         }
       },
-      "recorded_at": "Sat, 14 Oct 2023 03:41:42 GMT"
+      "recorded_at": "Thu, 23 Nov 2023 17:29:32 GMT"
     },
     {
       "request": {
@@ -166,19 +166,19 @@
             "1; mode=block"
           ],
           "X-Github-Request-Id": [
-            "5330:464B:70A5CC:8A3480:652A0DF5"
+            "6720:7749:278E16:2F3986:655F8BFC"
           ],
           "Accept-Ranges": [
             "bytes"
           ],
           "Date": [
-            "Sat, 14 Oct 2023 03:41:42 GMT"
+            "Thu, 23 Nov 2023 17:29:33 GMT"
           ],
           "Via": [
             "1.1 varnish"
           ],
           "X-Served-By": [
-            "cache-atl18424-ATL"
+            "cache-pdk-kpdk1780136-PDK"
           ],
           "X-Cache": [
             "MISS"
@@ -187,7 +187,7 @@
             "0"
           ],
           "X-Timer": [
-            "S1697254902.236046,VS0,VE90"
+            "S1700760573.076806,VS0,VE90"
           ],
           "Vary": [
             "Authorization,Accept-Encoding,Origin"
@@ -199,10 +199,10 @@
             "cross-origin"
           ],
           "X-Fastly-Request-Id": [
-            "704e720e0c9696848d1830d5488c8f01048b7c92"
+            "49e8583abb2666595056c2985b123da2a7cdcda7"
           ],
           "Expires": [
-            "Sat, 14 Oct 2023 03:46:42 GMT"
+            "Thu, 23 Nov 2023 17:34:33 GMT"
           ],
           "Source-Age": [
             "0"
@@ -213,7 +213,7 @@
           "string": "---\ntitle:\n- type: main\n  content: IHO-IOC GEBCO Cook Book\n  language: en\n- type: main\n  content: Livre de recettes GEBCO OHI-COI\n  language: fr\neditorialgroup:\n- - committee:\n      abbreviation: HSSC\n      name: Hydrographic Services and Standards Committee\n  - committee:\n      abbreviation: IRCC\n      name: Inter-Regional Coordination Committee\n      committee:\n        abbreviation: GEBCO\n        name: JOINT IHO-IOC GUIDING COMMITTEE FOR THE GENERAL BATHYMETRIC CHART OF\n          THE OCEANS\ntype: standard\ndocid:\n  type: IHO\n  id: B-11\n  primary: true\ndocnumber: 11\nedition:\n  content: 1.0.0\ndocstatus:\n  stage:\n    value: in-force\nlanguage:\n- en\n- fr\nscript: Latn\nversion:\n  revision_date: '2019-10-31'\ndate:\n  type: published\n  from: '2020-01-20'\ncopyright:\n- owner:\n    name: International Hydrographic Organization\n    abbreviation: IHO\n    url: www.iho.int\n  from: '2019'\n- owner:\n    name: Intergovernmental Oceanographic Commission\n    abbreviation: IOC\n    url: http://ioc-unesco.org\n  from: '2019'\nlink:\n- type: pdf\n  content: https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf\nplace: Monaco\nvalidity:\n  begins: '2019-10-31'\ncontributor:\n- organization:\n    name: International Hydrographic Organization\n    abbreviation: IHO\n    url: www.iho.int\n  role: publisher\n- organization:\n    name: Intergovernmental Oceanographic Commission\n    abbreviation: IOC\n    url: http://ioc-unesco.org\n  role: publisher\nseries:\n  number: B\n  type: main\n  title:\n    type: original\n    content:\n    - content: Bathymetric Publications\n      language: en\n      script: Latn\n    - content: Publications bathymÃ©triques\n      language: fr\n      script: Latn\n  place: Monaco\n  organization: International Hydrographic Organization\n"
         }
       },
-      "recorded_at": "Sat, 14 Oct 2023 03:41:42 GMT"
+      "recorded_at": "Thu, 23 Nov 2023 17:29:33 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"

@@ -7,7 +7,7 @@ RSpec.describe RelatonIho::HashConverter do
 
   it "convert editorial group & comment period" do
     hash = {
-      "schema-version" => "v1.2.4",
+      "schema-version" => "v1.2.5",
       "editorialgroup" => [
         [{
           "committee" => {
@@ -50,5 +50,11 @@ RSpec.describe RelatonIho::HashConverter do
     bib_hash = RelatonIho::HashConverter.hash_to_bib hash
     item = RelatonIho::IhoBibliographicItem.new(**bib_hash)
     expect(item.to_hash).to eq hash
+  end
+
+  it "creates document type" do
+    doctype = described_class.send :create_doctype, type: "standard"
+    expect(doctype).to be_instance_of RelatonIho::DocumentType
+    expect(doctype.type).to eq "standard"
   end
 end
