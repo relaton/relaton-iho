@@ -30,7 +30,7 @@
             "keep-alive"
           ],
           "Content-Length": [
-            "738"
+            "717"
           ],
           "Cache-Control": [
             "max-age=300"
@@ -42,7 +42,7 @@
             "application/zip"
           ],
           "Etag": [
-            "W/\"cab73e44f16c4ce98b4421305ff3987952273d9c61e7d9a1203b870e5be204cf\""
+            "W/\"1a34d02405054619c035775b4f4ecc3666a14547f59ba6a1ab1269e6030dcfb9\""
           ],
           "Strict-Transport-Security": [
             "max-age=31536000"
@@ -57,19 +57,19 @@
             "1; mode=block"
           ],
           "X-Github-Request-Id": [
-            "144C:7931:29965D:3141DA:655F8BFA"
+            "6CEC:2C77:14042DF:1935B3E:6594E909"
           ],
           "Accept-Ranges": [
             "bytes"
           ],
           "Date": [
-            "Thu, 23 Nov 2023 17:29:33 GMT"
+            "Wed, 03 Jan 2024 04:56:42 GMT"
           ],
           "Via": [
             "1.1 varnish"
           ],
           "X-Served-By": [
-            "cache-pdk-kpdk1780106-PDK"
+            "cache-pdk-kpdk1780140-PDK"
           ],
           "X-Cache": [
             "MISS"
@@ -78,7 +78,7 @@
             "0"
           ],
           "X-Timer": [
-            "S1700760573.937787,VS0,VE84"
+            "S1704257803.508128,VS0,VE90"
           ],
           "Vary": [
             "Authorization,Accept-Encoding,Origin"
@@ -90,10 +90,10 @@
             "cross-origin"
           ],
           "X-Fastly-Request-Id": [
-            "5ecce9ed82e2bb3786fa25ff995a5505498963c6"
+            "dcb283751ff16d5fab6787a5ddd583ff0e4d3d80"
           ],
           "Expires": [
-            "Thu, 23 Nov 2023 17:34:33 GMT"
+            "Wed, 03 Jan 2024 05:01:42 GMT"
           ],
           "Source-Age": [
             "0"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u00001rwWKá#=8\u0002\u0000\u0000Î\n\u0000\u0000\n\u0000\u001c\u0000index.yamlUT\t\u0000\u0003þ^_eþ^_eux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004\u0000\u0000\u0000uVËn\u001b1\f¼ç+ô\u0003ÜHÔkå›³\u0000ù€Å:I\u0000q` =´_J.P„\u001c]WCi83$–ˆ\u001eÈ\u001d>Þ\u000eî…\"?8wøññù~poû¯ýñ§|Zþì×Ïÿ˜`1á;æ™ª\u000b‹_Š\u0002Þ¨n<\u0015uc®..R`îÍu‹$\u0015ßð'j\nx¡¦Þ·/\u0017…È\u0006‘\u0015«äÒ²\u0002RiK´\u001aNEÐlÐ\u0017*‚f…~¢T]\u00154üU\u000e¶*\ny­Ðq\bj•ÏûP”\u0015›ÀNÈ,ÑÐ\t¼\t\u001bŠÆÓ0\u001e°ÝÊ‰Â\u0016/n!hñâ–æþLá‘5ï›˜Ê&WÞ‹†ƒ÷¢¢¾Yº´r\u0007£Üê\nÎÖº\u0015­Õ\\¹Ú~\u0002êGë\u0014y\"iäá™fZÒÐÕz\\ÒÐ\u0015é•§zeóÂY¦r\u0005ø«LåŠødÉ\u0010R®dÉVîÎ\u0007\u0007£ó±É¸Wð´‚A\u0007\u0011â¯\u0014\u0001ú…Z_C¨ƒÖ÷í óÈŠvW²Â#+ÚáÀm:5\rx,‰µÕw†É.\f\u0001ìBq\täÅnì:åY\u0001Ï'\n\u0011\u0016¼Ê\u0001Ìnwrò‚8i+ÎÄ#+Õ8É#)Õ¨2ÝO¢\u000bœ¦|üúzÿ}œ”•¼÷ã\u001dÖ®§IÕº›¾yš`†™Li2´)™•>Ê$Ã¥€\fŸ)À¡½R\u00003+>—™Ï\u0005*“ïÊ€\t¹\f|ÐyÇ¶]\bºv\"‡‹IB™\u0005¡ \u001b¥Ã\n\r’\u000e+ô'øiÒ<z¡oU´õúVE;¯µÙNjp'qœ,UŽðþÔ&L\r÷ËxÔûn@³þlvØÍ¸žz\u0006\u001bp=õ\u00106›ñNAªJgÀfGfý_#ùû÷Gó\u0017PK\u0001\u0002\u001e\u0003\u0014\u0000\u0000\u0000\b\u00001rwWKá#=8\u0002\u0000\u0000Î\n\u0000\u0000\n\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000¤\u0000\u0000\u0000\u0000index.yamlUT\u0005\u0000\u0003þ^_eux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004\u0000\u0000\u0000PK\u0005\u0006\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000P\u0000\u0000\u0000|\u0002\u0000\u0000\u0000\u0000"
+          "string": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u0000(r\"X\rîØ6#\u0002\u0000\u0000Ô\n\u0000\u0000\n\u0000\u001c\u0000index.yamlUT\t\u0000\u0003ë\u001a”eë\u001a”eux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004\u0000\u0000\u0000uVKN%1\fÜsŠ\\ÀMÇù¿\u001dÌz$¤w€V?>\u0012\u0012\u000f!Á\u0002n“Ö,Æ®¬SíTª\\v\u0013Ñ\r¹ÓëÓÉ©Þ;¿¬ËzãÜéåõíùäžö¯ýö“êeó´Òºüì×·ø{Ê..là\u0017Ê[$Vè3åäxñ zN\u001b“7øT\\€øT¶€ðÕeŒ¯[\u0006x¿®Â\u001f=WNä\u0005ú½ò\u0002?Ñ'{ Ï_ê\u000f°ð+uþVÍjt¬FÁ»÷÷çï»\u0019‹´÷ã\u001dz\u0015»ø\r˜\u0015»øMá\u001fÈß2+ì‡ˆÈ¬êz¬ÉE\u000e\u0000Cõ4U=™/þÏð†G9€7\u0004žè\u0013\u0018*ã-uÍ™Û¤¤œÀšÅÔ,º[¬éË¥[¬yÍ’ÅÀu\t–,‹+\u0005]ŸG\u001a@}\u001eiðZå0S9@•9Àæþ”\u0003ÐÝgŠqb{ŒÀõ£O&šKŸ ´…!M[\u0018úØ.\u0001ý¡9Ë|¨ˆ²L‡jîç!ˆvþJ<ô(ÚO\u0018£\u0001cSzßaWr\u001c$ìÛr\u001c,X¥¼ŒúÙ\u0004½ŒêY¡-.\u0003×\u000b‡kÖ\u0007é»\u0002?¾+Ð·Ü§\u0001Ü\"}\u001a€)oµðÚçÖ&5[ƒ5[™á\u000bÄ'ZIaP:Äâ\nÔ!–­À|Ì–‘œàÞèÍÄ`\"äÞK¬&Â\u0003%ãvÒ\u001cüdCËìG\u001bÚO–Eÿ\u0000q\u001e[Hó\u001d[ÈNèie‹]yÚ£\fz®ïñ:Ùã\u0015 =üÍ¹’‡9\u0019dUïØfFEÓ“ªMž\u0014\u001bLQÏ)\u001eß=§h~§ã¯Ã²MÇÿ†Î”ç2u¤`¯­ÑZ«\u0019éü\u001fç_PK\u0001\u0002\u001e\u0003\u0014\u0000\u0000\u0000\b\u0000(r\"X\rîØ6#\u0002\u0000\u0000Ô\n\u0000\u0000\n\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000¤\u0000\u0000\u0000\u0000index.yamlUT\u0005\u0000\u0003ë\u001a”eux\u000b\u0000\u0001\u0004é\u0003\u0000\u0000\u0004\u0000\u0000\u0000PK\u0005\u0006\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000P\u0000\u0000\u0000g\u0002\u0000\u0000\u0000\u0000"
         }
       },
-      "recorded_at": "Thu, 23 Nov 2023 17:29:32 GMT"
+      "recorded_at": "Wed, 03 Jan 2024 04:56:42 GMT"
     },
     {
       "request": {
@@ -166,19 +166,19 @@
             "1; mode=block"
           ],
           "X-Github-Request-Id": [
-            "6720:7749:278E16:2F3986:655F8BFC"
+            "203E:1EC8:158C9BD:1AC5F25:6594E90A"
           ],
           "Accept-Ranges": [
             "bytes"
           ],
           "Date": [
-            "Thu, 23 Nov 2023 17:29:33 GMT"
+            "Wed, 03 Jan 2024 04:56:42 GMT"
           ],
           "Via": [
             "1.1 varnish"
           ],
           "X-Served-By": [
-            "cache-pdk-kpdk1780136-PDK"
+            "cache-pdk-kpdk1780038-PDK"
           ],
           "X-Cache": [
             "MISS"
@@ -187,7 +187,7 @@
             "0"
           ],
           "X-Timer": [
-            "S1700760573.076806,VS0,VE90"
+            "S1704257803.665993,VS0,VE129"
           ],
           "Vary": [
             "Authorization,Accept-Encoding,Origin"
@@ -199,10 +199,10 @@
             "cross-origin"
           ],
           "X-Fastly-Request-Id": [
-            "49e8583abb2666595056c2985b123da2a7cdcda7"
+            "6b66cce1054b29242de37cfce80ae4d5c9e2fd4f"
           ],
           "Expires": [
-            "Thu, 23 Nov 2023 17:34:33 GMT"
+            "Wed, 03 Jan 2024 05:01:42 GMT"
           ],
           "Source-Age": [
             "0"
@@ -213,7 +213,7 @@
           "string": "---\ntitle:\n- type: main\n  content: IHO-IOC GEBCO Cook Book\n  language: en\n- type: main\n  content: Livre de recettes GEBCO OHI-COI\n  language: fr\neditorialgroup:\n- - committee:\n      abbreviation: HSSC\n      name: Hydrographic Services and Standards Committee\n  - committee:\n      abbreviation: IRCC\n      name: Inter-Regional Coordination Committee\n      committee:\n        abbreviation: GEBCO\n        name: JOINT IHO-IOC GUIDING COMMITTEE FOR THE GENERAL BATHYMETRIC CHART OF\n          THE OCEANS\ntype: standard\ndocid:\n  type: IHO\n  id: B-11\n  primary: true\ndocnumber: 11\nedition:\n  content: 1.0.0\ndocstatus:\n  stage:\n    value: in-force\nlanguage:\n- en\n- fr\nscript: Latn\nversion:\n  revision_date: '2019-10-31'\ndate:\n  type: published\n  from: '2020-01-20'\ncopyright:\n- owner:\n    name: International Hydrographic Organization\n    abbreviation: IHO\n    url: www.iho.int\n  from: '2019'\n- owner:\n    name: Intergovernmental Oceanographic Commission\n    abbreviation: IOC\n    url: http://ioc-unesco.org\n  from: '2019'\nlink:\n- type: pdf\n  content: https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf\nplace: Monaco\nvalidity:\n  begins: '2019-10-31'\ncontributor:\n- organization:\n    name: International Hydrographic Organization\n    abbreviation: IHO\n    url: www.iho.int\n  role: publisher\n- organization:\n    name: Intergovernmental Oceanographic Commission\n    abbreviation: IOC\n    url: http://ioc-unesco.org\n  role: publisher\nseries:\n  number: B\n  type: main\n  title:\n    type: original\n    content:\n    - content: Bathymetric Publications\n      language: en\n      script: Latn\n    - content: Publications bathymÃ©triques\n      language: fr\n      script: Latn\n  place: Monaco\n  organization: International Hydrographic Organization\n"
         }
       },
-      "recorded_at": "Thu, 23 Nov 2023 17:29:33 GMT"
+      "recorded_at": "Wed, 03 Jan 2024 04:56:42 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"

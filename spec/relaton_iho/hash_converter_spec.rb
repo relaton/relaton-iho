@@ -7,7 +7,7 @@ RSpec.describe RelatonIho::HashConverter do
 
   it "convert editorial group & comment period" do
     hash = {
-      "schema-version" => "v1.2.5",
+      "schema-version" => "v1.2.8",
       "editorialgroup" => [
         [{
           "committee" => {
