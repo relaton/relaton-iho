@@ -14,12 +14,12 @@ module RelatonIho
       # @return [RelatonIho::IhoBibliographicItem, nil] the IHO standard or nil if not found
       #
       def search(text, _year = nil, _opts = {}) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
-        Util.warn "(#{text}) Fetching from Relaton repository ..."
+        Util.info "Fetching from Relaton repository ...", key: text
         ref = text.sub(/^IHO\s/, "").sub(/^([[:alpha:]]+)(\d+)/, '\1-\2')
         index = Relaton::Index.find_or_create :iho, url: "#{ENDPOINT}index.zip"
         row = index.search(ref).max_by { |r| r[:id] }
         unless row
-          Util.warn "(#{text}) Not found."
+          Util.info "Not found.", key: text
           return
         end
 
@@ -33,7 +33,7 @@ module RelatonIho
         hash = HashConverter.hash_to_bib yaml
         hash[:fetched] = Date.today.to_s
         item = IhoBibliographicItem.new(**hash)
-        Util.warn "(#{text}) Found: `#{item.docidentifier.first.id}`"
+        Util.info "Found: `#{item.docidentifier.first.id}`", key: text
         item
       rescue SocketError, Errno::EINVAL, Errno::ECONNRESET, EOFError,
              Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError,
