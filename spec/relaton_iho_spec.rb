@@ -1,6 +1,4 @@
 RSpec.describe RelatonIho do
-  before { RelatonIho.instance_variable_set :@configuration, nil }
-
   it "has a version number" do
     expect(RelatonIho::VERSION).not_to be nil
   end
@@ -30,7 +28,9 @@ RSpec.describe RelatonIho do
         schema = Jing.new "grammars/relaton-iho-compile.rng"
         errors = schema.validate file
         expect(errors).to eq []
-      end.to output(/\[relaton-iho\] \(IHO B-11\) Fetching from Relaton repository \.\.\./).to_stderr
+      end.to output(
+        /\[relaton-iho\] INFO: \(IHO B-11\) Fetching from Relaton repository \.\.\./
+      ).to_stderr_from_any_process
     end
 
     it "by slightly misspelled reference" do
@@ -49,7 +49,7 @@ RSpec.describe RelatonIho do
     it "not found", vcr: { cassette_name: "not_found" } do
       expect do
         expect(RelatonIho::IhoBibliography.get("IHO B-1111")).to be_nil
-      end.to output(/\[relaton-iho\] \(IHO B-1111\) Not found\./).to_stderr
+      end.to output(/\[relaton-iho\] INFO: \(IHO B-1111\) Not found\./).to_stderr_from_any_process
     end
   end
 

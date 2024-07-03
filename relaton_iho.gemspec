@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.required_ruby_version = Gem::Requirement.new(">= 2.7.0")
 
-  s.add_dependency "relaton-bib", "~> 1.18.0"
+  s.add_dependency "base64"
+  s.add_dependency "relaton-bib", "~> 1.19.0"
   s.add_dependency "relaton-index", "~> 0.2.0"
 end

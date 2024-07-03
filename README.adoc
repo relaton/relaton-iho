@@ -37,26 +37,15 @@ $ gem install relaton-iho
 
 == Usage
 
-=== Configuration
-
-Configuration is optional. The available option is `logger` which is a `Logger` instance. By default, the logger is `Logger.new($stderr)` with `Logger::WARN` level. To change the logger level, use `RelatonIho.configure` block.
-
-[source,ruby]
-----
-require 'relaton_iho'
-=> true
-
-RelatonIho.configure do |config|
-  config.logger.level = Logger::DEBUG
-end
-----
-
 === Search for a standard using keywords
 
 Reference can be specified with or without an edition. References without an edition will return the latest edition of the standard. References with an edition will return the standard with the specified edition.
 
 [source,ruby]
 ----
+require 'relaton_iho'
+=> true
+
 # Search for a standard using a reference without an edition
 item = RelatonIho::IhoBibliography.search("IHO B-11")
 [relaton-iho] (IHO B-11) Fetching from Relaton repository ...
@@ -141,6 +130,10 @@ RelatonIho::IhoBibliographicItem.from_hash hash
 => #<RelatonIho::IhoBibliographicItem:0x007fc322ef8548
 ...
 ----
+
+=== Logging
+
+RelatonIho uses the relaton-logger gem for logging. By default, it logs to STDOUT. To change the log levels and add other loggers, read the https://github.com/relaton/relaton-logger#usage[relaton-logger] documentation.
 
 == Development
 

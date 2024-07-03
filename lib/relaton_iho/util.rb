@@ -1,9 +1,6 @@
 module RelatonIho
   module Util
     extend RelatonBib::Util
-
-    def self.logger
-      RelatonIho.configuration.logger
-    end
+    PROGNAME = "relaton-iho".freeze
   end
 end
