@@ -3,7 +3,7 @@ require "net/http"
 module RelatonIho
   class IhoBibliography
     ENDPOINT = "https://raw.githubusercontent.com/relaton/relaton-data-iho/" \
-               "master/".freeze
+               "main/".freeze
 
     class << self
       #
