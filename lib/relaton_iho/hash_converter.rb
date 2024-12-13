@@ -24,12 +24,15 @@ module RelatonIho
 
     # @param ret [Hash]
     def commentperiod_hash_to_bib(ret)
-      ret[:commentperiod] &&= CommentPeriond.new(**ret[:commentperiod])
+      cp = ret.dig(:ext, :commentperiod) || ret[:commentperiod] # @TODO remove ret[:commentperiod] after all gems are updated
+      return unless cp
+
+      ret[:commentperiod] = CommentPeriond.new(**cp)
     end
 
     # @param ret [Hash]
     def editorialgroup_hash_to_bib(ret)
-      eg = ret[:editorialgroup]
+      eg = ret.dig(:ext, :editorialgroup) || ret[:editorialgroup] # @TODO remove ret[:editorialgroup] after all gems are updated
       return unless eg.is_a?(Hash) || eg&.any?
 
       collection = RelatonBib.array(eg).map do |g|
