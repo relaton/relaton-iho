@@ -1,0 +1,72 @@
+<bibitem id="B11" type="standard" schema-version="1.2.0">
+  <fetched>2020-03-29</fetched>
+  <title language="en" type="main">IHO-IOC GEBCO Cook Book</title>
+  <title language="fr" type="main">Livre de recettes GEBCO OHI-COI</title>
+  <uri type="pdf">https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf</uri>
+  <docidentifier type="IHO" primary="true">B-11</docidentifier>
+  <docnumber>11</docnumber>
+  <date type="published">
+    <from>2020-01-20</from>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Hydrographic Organization</name>
+      <abbreviation>IHO</abbreviation>
+      <uri>www.iho.int</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Intergovernmental Oceanographic Commission</name>
+      <abbreviation>IOC</abbreviation>
+      <uri>http://ioc-unesco.org</uri>
+    </organization>
+  </contributor>
+  <edition>1.0.0</edition>
+  <version>
+    <revision-date>2019-10-31</revision-date>
+  </version>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <status>
+    <stage>in-force</stage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Hydrographic Organization</name>
+        <abbreviation>IHO</abbreviation>
+        <uri>www.iho.int</uri>
+      </organization>
+    </owner>
+  </copyright>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>Intergovernmental Oceanographic Commission</name>
+        <abbreviation>IOC</abbreviation>
+        <uri>http://ioc-unesco.org</uri>
+      </organization>
+    </owner>
+  </copyright>
+  <series type="main">
+    <title language="en" script="Latn" type="original">Bathymetric Publications</title>
+    <title language="fr" script="Latn" type="original">Publications bathymétriques</title>
+    <place>
+      <country>Monaco</country>
+    </place>
+    <organization>International Hydrographic Organization</organization>
+    <number>B</number>
+  </series>
+  <place>
+    <country>Monaco</country>
+  </place>
+  <validity>
+    <validityBegins>2019-10-31</validityBegins>
+  </validity>
+</bibitem>
