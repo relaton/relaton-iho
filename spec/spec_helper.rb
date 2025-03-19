@@ -19,7 +19,7 @@ require "jing"
 
 Dir["./spec/support/**/*.rb"].sort.each { |f| require f }
 
-require "relaton_iho"
+require "relaton/iho"
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
