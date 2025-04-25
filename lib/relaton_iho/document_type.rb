@@ -1,7 +1,7 @@
 module RelatonIho
   class DocumentType < RelatonBib::DocumentType
-    DOCTYPES = %w[policy-and-procedures best-practices supporting-document
-               report legal directives proposal standard].freeze
+    DOCTYPES = %w[policy-and-procedures best-practices supporting-document report legal
+                  directives proposal standard specification resolution regulation].freeze
 
     def initialize(type:, abbreviation: nil)
       check_type type
