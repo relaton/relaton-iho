@@ -47,7 +47,7 @@ module RelatonIho
     end
 
     # @return [Hash]
-    def to_hash
+    def to_hash(embedded: false)
       hash = super
       hash["ext"]["commentperiod"] = commentperiod.to_hash if commentperiod
       hash
