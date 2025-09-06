@@ -17,7 +17,7 @@ module RelatonIho
         Util.info "Fetching from Relaton repository ...", key: text
         ref = text.sub(/^IHO\s/, "").sub(/^([[:alpha:]]+)(\d+)/, '\1-\2')
         index = Relaton::Index.find_or_create :iho, url: "#{ENDPOINT}index.zip"
-        row = index.search(ref).max_by { |r| r[:id] }
+        row = index.search(ref).min_by { |r| r[:id] }
         unless row
           Util.info "Not found.", key: text
           return

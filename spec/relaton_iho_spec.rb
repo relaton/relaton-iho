@@ -46,6 +46,11 @@ RSpec.describe RelatonIho do
       expect(result.edition.content).to eq "4.2.0"
     end
 
+    it "take doc with shorter code", vcr: "s_4" do
+      result = RelatonIho::IhoBibliography.get "IHO S-4"
+      expect(result.docidentifier.first.id).to eq "S-4"
+    end
+
     it "not found", vcr: { cassette_name: "not_found" } do
       expect do
         expect(RelatonIho::IhoBibliography.get("IHO B-1111")).to be_nil
