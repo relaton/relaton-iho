@@ -7,9 +7,9 @@ module Relaton
       attribute :doctype, Doctype, default: -> { Doctype.new(content: "standard") }
       attribute :commentperiod, CommentPeriod
 
-      xml do
-        map_element "commentperiod", to: :commentperiod
-      end
+      xml { map_element "commentperiod", to: :commentperiod }
+
+      key_value { map_element "commentperiod", to: :commentperiod }
 
       def schema_version
         Relaton.schema_versions["relaton-model-iho"]

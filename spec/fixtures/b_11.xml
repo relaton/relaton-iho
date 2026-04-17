@@ -1,5 +1,5 @@
 <bibdata type="standard" schema-version="v1.5.6">
-  <fetched>2026-04-03</fetched>
+  <fetched>2026-04-17</fetched>
   <title language="en" type="main">IHO-IOC GEBCO Cook Book</title>
   <title language="fr" type="main">Livre de recettes GEBCO OHI-COI</title>
   <uri type="pdf">https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf</uri>
@@ -106,7 +106,7 @@
     <formattedPlace>Monaco</formattedPlace>
   </place>
   <validity>
-    <validityBegins>2019-10-31T00:00:00+00:00</validityBegins>
+    <validityBegins>2019-10-31T00:00:00Z</validityBegins>
   </validity>
   <ext schema-version="v1.1.2">
     <doctype>standard</doctype>

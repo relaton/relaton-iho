@@ -9,16 +9,16 @@ title:
   content: Livre de recettes GEBCO OHI-COI
   language: fr
 source:
-  content: https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf
+- content: https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf
   type: pdf
 type: standard
 docidentifier:
-  content: B-11
+- content: B-11
   type: IHO
   primary: true
 docnumber: '11'
 date:
-  type: published
+- type: published
   from: '2020-01-20'
 contributor:
 - organization:
@@ -42,11 +42,12 @@ contributor:
 edition:
   content: 1.0.0
 version:
-  revision_date: '2019-10-31'
+- revision_date: '2019-10-31'
 language:
 - en
 - fr
-script: Latn
+script:
+- Latn
 status:
   stage:
     content: in-force
@@ -70,7 +71,7 @@ copyright:
       - content: http://ioc-unesco.org
   from: '2019'
 series:
-  type: main
+- type: main
   title:
   - type: original
     content: Bathymetric Publications
@@ -82,12 +83,12 @@ series:
     script: Latn
   place:
     country:
-      content: Monaco
+    - content: Monaco
   organization: International Hydrographic Organization
   number: B
 place:
-  country:
-    content: Monaco
+- country:
+  - content: Monaco
 fetched: '2020-03-29'
 ext:
   schema_version: v1.1.2
