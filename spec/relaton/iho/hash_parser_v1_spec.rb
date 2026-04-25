@@ -40,4 +40,33 @@ describe Relaton::Iho::HashParserV1 do
       expect(titles[0].content).to eq "Some Series"
     end
   end
+
+  describe "#structuredidentifier_hash_to_bib" do
+    it "wraps ext.structuredidentifier hash into Iho::StructuredIdentifier" do
+      hash = { ext: { structuredidentifier: { docnumber: "S-100", part: "1" } } }
+      result = described_class.hash_to_bib(hash)
+      sid = result[:ext].structuredidentifier
+      expect(sid).to all(be_a(Relaton::Iho::StructuredIdentifier))
+      expect(sid.first.docnumber).to eq "S-100"
+      expect(sid.first.part).to eq "1"
+    end
+
+    it "accepts structuredidentifier at top level" do
+      hash = { structuredidentifier: { docnumber: "S-4", part: "B" } }
+      result = described_class.hash_to_bib(hash)
+      sid = result[:ext].structuredidentifier.first
+      expect(sid.docnumber).to eq "S-4"
+      expect(sid.part).to eq "B"
+    end
+
+    it "accepts an array of structuredidentifiers" do
+      hash = { ext: { structuredidentifier: [
+        { docnumber: "S-100", part: "1" },
+        { docnumber: "S-100", part: "2" },
+      ] } }
+      result = described_class.hash_to_bib(hash)
+      sid = result[:ext].structuredidentifier
+      expect(sid.map(&:part)).to eq ["1", "2"]
+    end
+  end
 end

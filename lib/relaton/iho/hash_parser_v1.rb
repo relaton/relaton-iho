@@ -19,7 +19,18 @@ module Relaton
         ret[:ext][:flavor] ||= flavor(ret)
         ics_hash_to_bib ret
         commentperiod_hash_to_bib ret
+        structuredidentifier_hash_to_bib ret
         ret[:ext] = Ext.new(**ret[:ext])
+      end
+
+      def structuredidentifier_hash_to_bib(ret)
+        sid = ret.dig(:ext, :structuredidentifier) || ret[:structuredidentifier]
+        return unless sid
+
+        ret[:ext]&.delete(:structuredidentifier)
+        ret.delete(:structuredidentifier)
+        ret[:ext][:structuredidentifier] =
+          array(sid).map { |s| StructuredIdentifier.new(**s) }
       end
 
       def commentperiod_hash_to_bib(ret)
