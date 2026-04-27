@@ -31,9 +31,14 @@ RSpec.describe Relaton::Iho do
       ).to_stderr_from_any_process
     end
 
-    it "by slightly misspelled reference", vcr: "iho_s63" do
-      result = Relaton::Iho::Bibliography.get "IHO S63"
+    it "by code", vcr: "iho_s63" do
+      result = Relaton::Iho::Bibliography.get "IHO S-63"
       expect(result.docidentifier.first.content).to eq "S-63"
+    end
+
+    it "raises on unparseable reference" do
+      expect { Relaton::Iho::Bibliography.get "IHO S63" }
+        .to raise_error(Pubid::Core::Errors::ParseError)
     end
 
     it "by code and edition", vcr: { cassette_name: "code_and_edition" } do

@@ -1,5 +1,5 @@
 <bibdata type="standard" schema-version="v1.5.6">
-  <fetched>2026-04-03</fetched>
+  <fetched>2026-04-27</fetched>
   <title language="en" type="main">IHO-IOC GEBCO Cook Book</title>
   <title language="fr" type="main">Livre de recettes GEBCO OHI-COI</title>
   <uri type="pdf">https://www.star.nesdis.noaa.gov/socd/lsa/GEBCO_Cookbook/documents/CookBook_20191031.pdf</uri>
@@ -111,5 +111,8 @@
   <ext schema-version="v1.1.2">
     <doctype>standard</doctype>
     <flavor>iho</flavor>
+    <structuredidentifier>
+      <docnumber>B-11</docnumber>
+    </structuredidentifier>
   </ext>
 </bibdata>

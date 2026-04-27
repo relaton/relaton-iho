@@ -135,6 +135,10 @@ module Relaton
       def create_relation(rel)
         Relation.new(**rel)
       end
+
+      def create_docid(**args)
+        Docidentifier.new(**args)
+      end
     end
   end
 end
