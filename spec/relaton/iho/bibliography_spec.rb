@@ -1,9 +1,9 @@
 RSpec.describe Relaton::Iho::Bibliography do
-  it "raise ReauestError" do
+  it "raise RequestError" do
     expect(Relaton::Index).to receive(:find_or_create).and_raise SocketError
     # expect(Net::HTTP).to receive(:get_response).and_raise SocketError
     expect do
-      Relaton::Iho::Bibliography.search "ref"
+      Relaton::Iho::Bibliography.search "IHO B-11"
     end.to raise_error Relaton::RequestError
   end
 

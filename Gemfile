@@ -5,6 +5,8 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in relaton_iho.gemspec
 gemspec
 
+gem "pubid-iho", github: "metanorma/pubid", branch: "main", glob: "gems/pubid-iho/*.gemspec"
+
 gem "byebug"
 gem "equivalent-xml", "~> 0.6"
 gem "rake", "~> 13.0"
