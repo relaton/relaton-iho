@@ -10,9 +10,11 @@ namespace :spec do
   task :update_index do
     require "net/http"
     require "uri"
+    require_relative "lib/relaton/iho"
 
-    url = "https://raw.githubusercontent.com/relaton/relaton-data-iho/data-v2/index-v1.zip"
-    dest = File.join(__dir__, "spec", "fixtures", "index-v1.zip")
+    filename = "#{Relaton::Iho::INDEXFILE}.zip"
+    url = "https://raw.githubusercontent.com/relaton/relaton-data-iho/data-v2/\#{filename}"
+    dest = File.join(__dir__, "spec", "fixtures", filename)
 
     puts "Downloading \#{url} ..."
     uri = URI.parse(url)

@@ -11,7 +11,7 @@ require_relative "iho/bibliography"
 
 module Relaton
   module Iho
-    INDEXFILE = "index-v1".freeze
+    INDEXFILE = "index-v2".freeze
 
     class Error < StandardError; end
 

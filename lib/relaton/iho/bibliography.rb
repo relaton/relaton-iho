@@ -2,7 +2,7 @@ require "net/http"
 
 module Relaton
   module Iho
-      module Bibliography
+    module Bibliography
       ENDPOINT = "https://raw.githubusercontent.com/relaton/relaton-data-iho/refs/heads/data-v2/".freeze
 
       class << self
@@ -16,9 +16,7 @@ module Relaton
         def search(text, _year = nil, _opts = {}) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
           pubid = text.is_a?(String) ? ::Pubid::Iho::Identifier.parse(text) : text
           Util.info "Fetching from Relaton repository ...", key: pubid.to_s
-          ref = pubid.to_s.sub(/^IHO\s/, "")
-          index = Relaton::Index.find_or_create :iho, url: "#{ENDPOINT}#{INDEXFILE}.zip"
-          row = index.search(ref).min_by { |r| r[:id] }
+          row = index.search { |r| pubid_match?(r[:id], pubid) }.min_by { |r| row_version(r[:id]) }
           unless row
             Util.info "Not found.", key: pubid.to_s
             return
@@ -75,6 +73,40 @@ module Relaton
         # @return [RelatonIho::IhoBibliographicItem]
         def get(ref, year = nil, opts = {})
           search(ref, year, opts)
+        end
+
+        private
+
+        def index
+          Relaton::Index.find_or_create(
+            :iho,
+            url: "#{ENDPOINT}#{INDEXFILE}.zip",
+            file: "#{INDEXFILE}.yaml",
+            id_keys: %i[publisher number type version],
+            pubid_class: ::Pubid::Iho::Identifier,
+          )
+        end
+
+        def pubid_match?(row_id, query)
+          row_attrs = row_attributes(row_id)
+          return false unless row_attrs
+
+          query_attrs = query.to_h
+          row_attrs[:publisher] == query_attrs[:publisher] &&
+            row_attrs[:type] == query_attrs[:type] &&
+            row_attrs[:number] == query_attrs[:number] &&
+            (query_attrs[:version].nil? || row_attrs[:version].to_s == query_attrs[:version].to_s)
+        end
+
+        def row_attributes(row_id)
+          return row_id.to_h if row_id.is_a?(::Pubid::Core::Identifier::Base)
+          return row_id if row_id.is_a?(Hash)
+
+          nil
+        end
+
+        def row_version(row_id)
+          row_attributes(row_id)&.dig(:version).to_s
         end
       end
     end
