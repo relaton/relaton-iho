@@ -33,6 +33,51 @@ describe Relaton::Iho::Docidentifier do
     end
   end
 
+  describe "#remove_part!" do
+    it "clears part on the underlying Pubid identifier" do
+      d = described_class.new(content: "S-100 Part 1", type: "IHO", primary: true)
+      expect(d.pubid.part).to eq "1"
+      d.remove_part!
+      expect(d.pubid.part).to be_nil
+    end
+
+    it "is a safe no-op when pubid is nil" do
+      d = described_class.new(type: "IHO")
+      expect { d.remove_part! }.not_to raise_error
+      expect(d.pubid).to be_nil
+    end
+  end
+
+  describe "#remove_date!" do
+    it "clears year on the underlying Pubid identifier" do
+      d = described_class.new(content: "S-100 Part 1", type: "IHO", primary: true)
+      d.pubid.year = 2020
+      d.remove_date!
+      expect(d.pubid.year).to be_nil
+    end
+
+    it "is a safe no-op when pubid is nil" do
+      d = described_class.new(type: "IHO")
+      expect { d.remove_date! }.not_to raise_error
+      expect(d.pubid).to be_nil
+    end
+  end
+
+  describe "#to_all_parts!" do
+    it "marks the underlying Pubid identifier as covering all parts" do
+      d = described_class.new(content: "S-100 Part 1", type: "IHO", primary: true)
+      expect(d.pubid.all_parts).to be_falsey
+      d.to_all_parts!
+      expect(d.pubid.all_parts).to be true
+    end
+
+    it "is a safe no-op when pubid is nil" do
+      d = described_class.new(type: "IHO")
+      expect { d.to_all_parts! }.not_to raise_error
+      expect(d.pubid).to be_nil
+    end
+  end
+
   describe "round-trip via Iho::Item" do
     let(:xml) do
       <<~XML
