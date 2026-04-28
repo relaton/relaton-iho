@@ -5,7 +5,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in relaton_iho.gemspec
 gemspec
 
-gem "puid-iho", github: "relaton/pubid-iho", branch: "main"
+gem "pubid-iho", github: "metanorma/pubid", branch: "main", glob: "gems/pubid-iho/*.gemspec"
 
 gem "byebug"
 gem "equivalent-xml", "~> 0.6"
