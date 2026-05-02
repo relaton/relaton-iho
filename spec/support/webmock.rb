@@ -1,8 +1,9 @@
 require "webmock/rspec"
 require "zip"
 require "yaml"
+require "relaton/iho"
 
-INDEX_ZIP_PATH = File.join(__dir__, "..", "fixtures", "index-v1.zip")
+INDEX_ZIP_PATH = File.join(__dir__, "..", "fixtures", "#{Relaton::Iho::INDEXFILE}.zip")
 
 RSpec.configure do |config|
   config.before(:suite) do
@@ -11,7 +12,7 @@ RSpec.configure do |config|
     end
     index_data = YAML.safe_load(yaml, permitted_classes: [Symbol])
 
-    type = Relaton::Index::Type.new(:iho, nil, "index-v1.yaml")
+    type = Relaton::Index::Type.new(:iho, nil, "#{Relaton::Iho::INDEXFILE}.yaml")
     type.instance_variable_set(:@index, index_data)
     type.define_singleton_method(:actual?) { |**args| args.key?(:url) }
 

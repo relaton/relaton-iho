@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = Gem::Requirement.new(">= 3.2.0")
 
   s.add_dependency "base64"
+  s.add_dependency "pubid-iho", "~> 1.15.15"
   s.add_dependency "relaton-bib", "~> 2.0.0"
   s.add_dependency "relaton-core", "~> 0.0.13"
   s.add_dependency "relaton-index", "~> 0.2.0"

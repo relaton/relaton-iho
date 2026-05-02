@@ -111,5 +111,8 @@
   <ext schema-version="v1.1.2">
     <doctype>standard</doctype>
     <flavor>iho</flavor>
+    <structuredidentifier>
+      <docnumber>B-11</docnumber>
+    </structuredidentifier>
   </ext>
 </bibdata>

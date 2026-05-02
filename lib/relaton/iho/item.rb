@@ -1,5 +1,6 @@
 require_relative "item_data"
 require_relative "ext"
+require_relative "docidentifier"
 
 module Relaton
   module Iho
@@ -7,6 +8,8 @@ module Relaton
       model ItemData
 
       attribute :ext, Ext
+      attribute :docidentifier, Docidentifier, collection: true,
+                                               initialize_empty: true
     end
   end
 end

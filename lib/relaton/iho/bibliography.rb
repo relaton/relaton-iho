@@ -2,7 +2,7 @@ require "net/http"
 
 module Relaton
   module Iho
-      module Bibliography
+    module Bibliography
       ENDPOINT = "https://raw.githubusercontent.com/relaton/relaton-data-iho/refs/heads/data-v2/".freeze
 
       class << self
@@ -14,12 +14,11 @@ module Relaton
         # @return [RelatonIho::IhoBibliographicItem, nil] the IHO standard or nil if not found
         #
         def search(text, _year = nil, _opts = {}) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
-          Util.info "Fetching from Relaton repository ...", key: text
-          ref = text.sub(/^IHO\s/, "").sub(/^([[:alpha:]]+)(\d+)/, '\1-\2')
-          index = Relaton::Index.find_or_create :iho, url: "#{ENDPOINT}#{INDEXFILE}.zip"
-          row = index.search(ref).min_by { |r| r[:id] }
+          pubid = text.is_a?(String) ? ::Pubid::Iho::Identifier.parse(text) : text
+          Util.info "Fetching from Relaton repository ...", key: pubid.to_s
+          row = index.search { |r| pubid_match?(r[:id], pubid) }.min_by { |r| row_version(r[:id]) }
           unless row
-            Util.info "Not found.", key: text
+            Util.info "Not found.", key: pubid.to_s
             return
           end
 
@@ -30,13 +29,39 @@ module Relaton
           end
 
           item = Relaton::Iho::Item.from_yaml resp.body
-          Util.info "Found: `#{item.docidentifier.first.content}`", key: text
+          enrich_with_pubid(item, pubid)
+          Util.info "Found: `#{item.docidentifier.first.content}`", key: pubid.to_s
           item.tap { |i| i.fetched = Date.today.to_s }
         rescue SocketError, Errno::EINVAL, Errno::ECONNRESET, EOFError,
               Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError,
               Net::ProtocolError, Net::ReadTimeout, OpenSSL::SSL::SSLError,
               Errno::ETIMEDOUT => e
           raise Relaton::RequestError, "Could not access #{uri}: #{e.message}"
+        end
+
+        # Populate ext.structuredidentifier from the parsed Pubid when the
+        # fetched record doesn't already provide one. Maps `pubid.number`
+        # (with type prefix, e.g. `S-100`) -> docnumber, `pubid.part` -> part,
+        # `pubid.appendix` -> appendixid, `pubid.annex` -> annexid,
+        # `pubid.supplement` -> supplementid.
+        def enrich_with_pubid(item, pubid)
+          return if item.ext&.structuredidentifier&.any?
+
+          sid = StructuredIdentifier.new(
+            docnumber: pubid_docnumber(pubid),
+            part: pubid.part,
+            appendixid: (pubid.appendix if pubid.respond_to?(:appendix)),
+            annexid: (pubid.annex if pubid.respond_to?(:annex)),
+            supplementid: (pubid.supplement if pubid.respond_to?(:supplement)),
+          )
+          item.ext ||= Ext.new
+          item.ext.structuredidentifier = [sid]
+        end
+
+        # "S-100" rather than "100" — keeps the type prefix that distinguishes
+        # the IHO series (S/P/M/B/C). Matches spec/fixtures/iho_part.xml.
+        def pubid_docnumber(pubid)
+          pubid.to_s.sub(/^IHO\s/, "").split(/\s+/, 2).first
         end
 
         # @param ref [String] the IHO standard Code to look up (e..g "IHO B-11")
@@ -50,6 +75,49 @@ module Relaton
         # @return [RelatonIho::IhoBibliographicItem]
         def get(ref, year = nil, opts = {})
           search(ref, year, opts)
+        end
+
+        private
+
+        def index
+          Relaton::Index.find_or_create(
+            :iho,
+            url: "#{ENDPOINT}#{INDEXFILE}.zip",
+            file: "#{INDEXFILE}.yaml",
+            id_keys: %i[publisher number type version part appendix annex supplement],
+            pubid_class: ::Pubid::Iho::Identifier,
+          )
+        end
+
+        def pubid_match?(row_id, query)
+          row_attrs = row_attributes(row_id)
+          return false unless row_attrs
+
+          query_attrs = query.to_h
+          # Subdivision keys (part/appendix/annex/supplement) use strict
+          # equality — a nil query must match a nil row (the umbrella),
+          # not an arbitrary subdivision under the same (number, version).
+          # Only :version stays nil-tolerant: an unqualified `IHO B-11`
+          # query is expected to find the latest edition.
+          row_attrs[:publisher] == query_attrs[:publisher] &&
+            row_attrs[:type] == query_attrs[:type] &&
+            row_attrs[:number] == query_attrs[:number] &&
+            (query_attrs[:version].nil? || row_attrs[:version].to_s == query_attrs[:version].to_s) &&
+            row_attrs[:part].to_s == query_attrs[:part].to_s &&
+            row_attrs[:appendix].to_s == query_attrs[:appendix].to_s &&
+            row_attrs[:annex].to_s == query_attrs[:annex].to_s &&
+            row_attrs[:supplement].to_s == query_attrs[:supplement].to_s
+        end
+
+        def row_attributes(row_id)
+          return row_id.to_h if row_id.is_a?(::Pubid::Core::Identifier::Base)
+          return row_id if row_id.is_a?(Hash)
+
+          nil
+        end
+
+        def row_version(row_id)
+          row_attributes(row_id)&.dig(:version).to_s
         end
       end
     end

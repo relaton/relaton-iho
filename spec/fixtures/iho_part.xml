@@ -1,0 +1,37 @@
+<bibdata type="standard" schema-version="v1.5.6">
+  <title language="en" type="title-main">IHO S-100 Universal Hydrographic Data Model</title>
+  <title language="en" type="title-part">Part 1: General introduction</title>
+  <docidentifier type="IHO" primary="true">S-100 Part 1</docidentifier>
+  <docnumber>100-1</docnumber>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Hydrographic Organization</name>
+      <abbreviation>IHO</abbreviation>
+      <uri>www.iho.int</uri>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>in-force</stage>
+  </status>
+  <copyright>
+    <from>2022</from>
+    <owner>
+      <organization>
+        <name>International Hydrographic Organization</name>
+        <abbreviation>IHO</abbreviation>
+        <uri>www.iho.int</uri>
+      </organization>
+    </owner>
+  </copyright>
+  <ext schema-version="v1.1.2">
+    <doctype>standard</doctype>
+    <flavor>iho</flavor>
+    <structuredidentifier>
+      <docnumber>S-100</docnumber>
+      <part>1</part>
+    </structuredidentifier>
+  </ext>
+</bibdata>

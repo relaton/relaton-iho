@@ -1,7 +1,9 @@
 require "relaton/bib"
 require "relaton/index"
+require "pubid/iho"
 require_relative "iho/version"
 require_relative "iho/util"
+require_relative "iho/docidentifier"
 require_relative "iho/item"
 require_relative "iho/bibitem"
 require_relative "iho/bibdata"
@@ -9,7 +11,7 @@ require_relative "iho/bibliography"
 
 module Relaton
   module Iho
-    INDEXFILE = "index-v1".freeze
+    INDEXFILE = "index-v2".freeze
 
     class Error < StandardError; end
 
