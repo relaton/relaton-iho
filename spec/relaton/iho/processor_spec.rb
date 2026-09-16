@@ -61,7 +61,7 @@ describe Relaton::Iho::Processor do
     it "removes the index file" do
       index = double("index")
       expect(Relaton::Index).to receive(:find_or_create).with(
-        :iho, url: true, file: "#{Relaton::Iho::INDEXFILE}.yaml}"
+        :iho, url: true, file: "#{Relaton::Iho::INDEXFILE}.yaml"
       ).and_return(index)
       expect(index).to receive(:remove_file)
       processor.remove_index_file
