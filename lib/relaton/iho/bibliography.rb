@@ -16,7 +16,7 @@ module Relaton
         def search(text, _year = nil, _opts = {}) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
           pubid = text.is_a?(String) ? ::Pubid::Iho::Identifier.parse(text) : text
           Util.info "Fetching from Relaton repository ...", key: pubid.to_s
-          row = index.search { |r| pubid_match?(r[:id], pubid) }.min_by { |r| row_version(r[:id]) }
+          row = select_latest(index.search { |r| pubid_match?(r[:id], pubid) })
           unless row
             Util.info "Not found.", key: pubid.to_s
             return
@@ -77,6 +77,12 @@ module Relaton
           search(ref, year, opts)
         end
 
+        # Pick the row of the most recent edition, comparing versions
+        # numerically so 10.0.0 sorts after 9.0.0.
+        def select_latest(rows)
+          rows.max_by { |r| Gem::Version.new(row_version(r[:id])) }
+        end
+
         private
 
         def index
@@ -116,8 +122,10 @@ module Relaton
           nil
         end
 
+
         def row_version(row_id)
-          row_attributes(row_id)&.dig(:version).to_s
+          version = row_attributes(row_id)&.dig(:version).to_s
+          version.empty? ? "0" : version
         end
       end
     end
